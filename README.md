@@ -101,7 +101,7 @@
 [:arrow_up::arrow_up::arrow_up::arrow_up::arrow_up: **top** :arrow_up::arrow_up::arrow_up::arrow_up::arrow_up:](#python-for-data-science)
 <br /><br />
 
-<h3>Exercise 00: First python script</h3>
+<h3>ex00 Hello py</h3>
 
 Turn-in directory : ex00/<br />
 Files to turn in : Hello.py<br />
