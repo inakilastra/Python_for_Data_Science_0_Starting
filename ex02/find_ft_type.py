@@ -23,6 +23,9 @@ def all_thing_is_obj(object: any) -> int:
     return 42
 
 '''    tester.py
+import sys
+print("Estoy usando Python " + sys.version + "\n")
+
 from find_ft_type import all_thing_is_obj
 
 ft_list = ["Hello", "tata!"]
