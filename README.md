@@ -22,6 +22,59 @@
 >
 > - :white_check_mark: [Hello.py](#ex00-hello-py) 
 
+<br /><br />
+
+> Ficheros ex01
+>
+> - :white_check_mark: [Hello.py](#ex00-hello-py) 
+
+<br /><br />
+
+> Ficheros ex02
+>
+> - :white_check_mark: [Hello.py](#ex00-hello-py) 
+
+<br /><br />
+
+> Ficheros ex03
+>
+> - :white_check_mark: [Hello.py](#ex00-hello-py) 
+
+<br /><br />
+
+> Ficheros ex04
+>
+> - :white_check_mark: [Hello.py](#ex00-hello-py) 
+
+<br /><br />
+
+> Ficheros ex05
+>
+> - :white_check_mark: [Hello.py](#ex00-hello-py) 
+
+<br /><br />
+
+> Ficheros ex06
+>
+> - :white_check_mark: [Hello.py](#ex00-hello-py) 
+
+<br /><br />
+
+> Ficheros ex07
+>
+> - :white_check_mark: [Hello.py](#ex00-hello-py) 
+
+<br /><br />
+
+> Ficheros ex08
+>
+> - :white_check_mark: [Hello.py](#ex00-hello-py) 
+
+<br /><br />
+
+> Ficheros ex09
+>
+> - :white_check_mark: [Hello.py](#ex00-hello-py) 
 
 <br /><br /><br /><br />
 
@@ -48,13 +101,39 @@
 [:arrow_up::arrow_up::arrow_up::arrow_up::arrow_up: **top** :arrow_up::arrow_up::arrow_up::arrow_up::arrow_up:](#python-for-data-science)
 <br /><br />
 
-<h3>Exercise 00: XXX</h3>
+<h3>Exercise 00: First python script</h3>
 
-Turn-in directory : exXXX/<br />
-Files to turn in : XXX.py<br />
-Forbidden functions : XXX<br />
+Turn-in directory : ex00/<br />
+Files to turn in : Hello.py<br />
+Allowed functions : None<br />
 
-XXX
+You need to modify the string of each data object to display the following greetings:
+"Hello World", "Hello «country of your campus»", "Hello «city of your campus»", "Hello «name of your campus»"
+
+```python
+ft_list = ["Hello", "tata!"]
+ft_tuple = ("Hello", "toto!")
+ft_set = {"Hello", "tutu!"}
+ft_dict = {"Hello" : "titi!"}
+
+#your code here
+
+print(ft_list)
+print(ft_tuple)
+print(ft_set)
+print(ft_dict)
+```
+
+Expected output:
+
+```python
+$>python Hello.py | cat -e
+['Hello', 'World!']$
+('Hello', 'France!')$
+{'Hello', 'Paris!'}$
+{'Hello': '42Paris!'}$
+$>
+```
 
 <br /><br />
 [:arrow_up::arrow_up::arrow_up::arrow_up::arrow_up: **top** :arrow_up::arrow_up::arrow_up::arrow_up::arrow_up:](#python-for-data-science)
