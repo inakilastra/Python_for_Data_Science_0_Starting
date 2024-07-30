@@ -101,7 +101,7 @@
 [:arrow_up::arrow_up::arrow_up::arrow_up::arrow_up: **top** :arrow_up::arrow_up::arrow_up::arrow_up::arrow_up:](#python-for-data-science)
 <br /><br />
 
-<h3>ex00 Hello py</h3>
+<h3>Exercise 00: First python script</h3>
 
 Turn-in directory : ex00/<br />
 Files to turn in : Hello.py<br />
@@ -139,37 +139,152 @@ $>
 [:arrow_up::arrow_up::arrow_up::arrow_up::arrow_up: **top** :arrow_up::arrow_up::arrow_up::arrow_up::arrow_up:](#python-for-data-science)
 <br /><br /><br /><br />
 
-<h3>Exercise 01: XXX</h3>
+<h3>Exercise 01: First use of package</h3>
 
-Turn-in directory : exXXX/<br />
-Files to turn in : XXX.py<br />
-Forbidden functions : XXX<br />
+Turn-in directory : ex01/<br />
+Files to turn in : format_ft_time.py<br />
+Allowed functions : time, datetime or any other library that allows to
+receive the date<br />
 
-XXX
+Write a script that formats the dates this way, of course your date will not be mine as in the example but it must be formatted the same.
 
-<br /><br />
-[:arrow_up::arrow_up::arrow_up::arrow_up::arrow_up: **top** :arrow_up::arrow_up::arrow_up::arrow_up::arrow_up:](#python-for-data-science)
-<br /><br /><br /><br />
+Expected output:
 
-<h3>Exercise 02: XXX</h3>
-
-Turn-in directory : exXXX/<br />
-Files to turn in : XXX.py<br />
-Forbidden functions : XXX<br />
-
-XXX
+```python
+$>python format_ft_time.py | cat -e
+Seconds since January 1, 1970: 1,666,355,857.3622 or 1.67e+09 in scientific notation$
+Oct 21 2022$
+$>
+```
 
 <br /><br />
 [:arrow_up::arrow_up::arrow_up::arrow_up::arrow_up: **top** :arrow_up::arrow_up::arrow_up::arrow_up::arrow_up:](#python-for-data-science)
 <br /><br /><br /><br />
 
-<h3>Exercise 03: XXX</h3>
+<h3>Exercise 02: First function python</h3>
 
-Turn-in directory : exXXX/<br />
-Files to turn in : XXX.py<br />
-Forbidden functions : XXX<br />
+Turn-in directory : ex02/<br />
+Files to turn in : find_ft_type.py<br />
+Allowed functions : None<br />
 
-XXX
+Write a function that prints the object types and returns 42.
+
+Here’s how it should be prototyped:
+
+```python
+def all_thing_is_obj(object: any) -> int:
+#your code here
+```
+
+Your tester.py:
+
+```python
+from find_ft_type import all_thing_is_obj
+ft_list = ["Hello", "tata!"]
+ft_tuple = ("Hello", "toto!")
+ft_set = {"Hello", "tutu!"}
+ft_dict = {"Hello" : "titi!"}
+all_thing_is_obj(ft_list)
+all_thing_is_obj(ft_tuple)
+all_thing_is_obj(ft_set)
+all_thing_is_obj(ft_dict)
+all_thing_is_obj("Brian")
+all_thing_is_obj("Toto")
+print(all_thing_is_obj(10))
+```
+
+Expected output:
+
+```python
+$>python tester.py | cat -e
+List : <class 'list'>$
+Tuple : <class 'tuple'>$
+Set : <class 'set'>$
+Dict : <class 'dict'>$
+Brian is in the kitchen : <class 'str'>$
+Toto is in the kitchen : <class 'str'>$
+Type not found$
+42$
+$>
+```
+
+```
+Running your function alone does nothing.
+```
+
+Expected output:
+
+```python
+$>python find_ft_type.py | cat -e
+$>
+```
+
+<br /><br />
+[:arrow_up::arrow_up::arrow_up::arrow_up::arrow_up: **top** :arrow_up::arrow_up::arrow_up::arrow_up::arrow_up:](#python-for-data-science)
+<br /><br /><br /><br />
+
+<h3>Exercise 03: NULL not found</h3>
+
+Turn-in directory : ex03/<br />
+Files to turn in : NULL_not_found.py<br />
+Allowed functions : None<br />
+
+Write a function that prints the object type of all types of "Null".
+Return 0 if it goes well and 1 in case of error.
+Your function needs to print all types of NULL.
+
+Here’s how it should be prototyped:
+
+```python
+def NULL_not_found(object: any) -> int:
+#your code here
+```
+
+Your tester.py:
+
+```python
+from NULL_not_found import NULL_not_found
+Nothing = None
+Garlic = float("NaN")
+Zero = 0
+Empty = ’’
+Fake = False
+NULL_not_found(Nothing)
+NULL_not_found(Garlic)
+NULL_not_found(Zero)
+NULL_not_found(Empty)
+NULL_not_found(Fake)
+print(NULL_not_found("Brian"))
+```
+
+```
+Empty = ”
+```
+
+Expected output:
+
+```python
+$>python tester.py | cat -e
+Nothing: None <class 'NoneType'>$
+Cheese: nan <class 'float'>$
+Zero: 0 <class 'int'>$
+Empty: <class 'str'>$
+Fake: False <class 'bool'>$
+Type not Found$
+1$
+$>
+```
+
+```
+Running your function alone does nothing.
+```
+
+Expected output:
+
+```python
+$>python NULL_not_found.py | cat -e
+$>
+```
 
 <br /><br />
 [:arrow_up::arrow_up::arrow_up::arrow_up::arrow_up: **top** :arrow_up::arrow_up::arrow_up::arrow_up::arrow_up:](#python-for-data-science)
@@ -179,7 +294,7 @@ XXX
 
 Turn-in directory : exXXX/<br />
 Files to turn in : XXX.py<br />
-Forbidden functions : XXX<br />
+Allowed functions : None<br />
 
 XXX
 
@@ -191,7 +306,7 @@ XXX
 
 Turn-in directory : exXXX/<br />
 Files to turn in : XXX.py<br />
-Forbidden functions : XXX<br />
+Allowed functions : None<br />
 
 XXX
 
@@ -203,7 +318,7 @@ XXX
 
 Turn-in directory : exXXX/<br />
 Files to turn in : XXX.py<br />
-Forbidden functions : XXX<br />
+Allowed functions : None<br />
 
 XXX
 
@@ -215,7 +330,7 @@ XXX
 
 Turn-in directory : exXXX/<br />
 Files to turn in : XXX.py<br />
-Forbidden functions : XXX<br />
+Allowed functions : None<br />
 
 XXX
 
@@ -227,7 +342,7 @@ XXX
 
 Turn-in directory : exXXX/<br />
 Files to turn in : XXX.py<br />
-Forbidden functions : XXX<br />
+Allowed functions : None<br />
 
 XXX
 
@@ -239,7 +354,7 @@ XXX
 
 Turn-in directory : exXXX/<br />
 Files to turn in : XXX.py<br />
-Forbidden functions : XXX<br />
+Allowed functions : None<br />
 
 XXX
 
@@ -270,49 +385,189 @@ XXX
 [:arrow_up::arrow_up::arrow_up::arrow_up::arrow_up: **subir** :arrow_up::arrow_up::arrow_up::arrow_up::arrow_up:](#python-for-data-science)
 <br /><br />
 
-<h3>Exercise 00: XXX</h3>
+<h3>Exercise 00: First python script</h3>
 
-Turn-in directory : exXXX/<br />
-Files to turn in : XXX.py<br />
-Forbidden functions : XXX<br />
+Turn-in directory : ex00/<br />
+Files to turn in : Hello.py<br />
+Allowed functions : None<br />
 
-XXX
+Debes modificar la cadena de cada objeto de datos para mostrar los siguientes saludos:
+"Hola mundo", "Hola «país de tu campus»", "Hola «ciudad de tu campus»", "Hola «nombre de tu campus»"
+
+```python
+ft_list = ["Hola", "tata!"]
+ft_tuple = ("Hola", "toto!")
+ft_set = {"Hola", "tutu!"}
+ft_dict = {"Hola" : "titi!"}
+
+#tu código aquí
+
+print(ft_list)
+print(ft_tuple)
+print(ft_set)
+print(ft_dict)
+```
+
+Salida esperada:
+
+```python
+$>python Hello.py | cat -e
+['Hola', '¡Mundo!']$
+('Hola', '¡Francia!')$
+{'Hola', '¡París!'}$
+{'Hola': '42¡París!'}$
+$>
+```
 
 <br /><br />
 [:arrow_up::arrow_up::arrow_up::arrow_up::arrow_up: **top** :arrow_up::arrow_up::arrow_up::arrow_up::arrow_up:](#python-for-data-science)
 <br /><br /><br /><br />
 
-<h3>Exercise 01: XXX</h3>
+<h3>Exercise 01: First use of package</h3>
 
-Turn-in directory : exXXX/<br />
-Files to turn in : XXX.py<br />
-Forbidden functions : XXX<br />
+Turn-in directory : ex01/<br />
+Files to turn in : format_ft_time.py<br />
+Allowed functions : time, datetime or any other library that allows to
+receive the date<br />
 
-XXX
+Escribe un script que formatee las fechas de esta manera, por supuesto tu fecha no será la mía como en el ejemplo pero debe tener el mismo formato.
 
-<br /><br />
-[:arrow_up::arrow_up::arrow_up::arrow_up::arrow_up: **top** :arrow_up::arrow_up::arrow_up::arrow_up::arrow_up:](#python-for-data-science)
-<br /><br /><br /><br />
+Resultado esperado:
 
-<h3>Exercise 02: XXX</h3>
-
-Turn-in directory : exXXX/<br />
-Files to turn in : XXX.py<br />
-Forbidden functions : XXX<br />
-
-XXX
+```python
+$>python format_ft_time.py | cat -e
+Seconds since January 1, 1970: 1,666,355,857.3622 or 1.67e+09 in scientific notation$
+Oct 21 2022$
+$>
+```
 
 <br /><br />
 [:arrow_up::arrow_up::arrow_up::arrow_up::arrow_up: **top** :arrow_up::arrow_up::arrow_up::arrow_up::arrow_up:](#python-for-data-science)
 <br /><br /><br /><br />
 
-<h3>Exercise 03: XXX</h3>
+<h3>Exercise 02: First function python</h3>
 
-Turn-in directory : exXXX/<br />
-Files to turn in : XXX.py<br />
-Forbidden functions : XXX<br />
+Turn-in directory : ex02/<br />
+Files to turn in : find_ft_type.py<br />
+Allowed functions : None<br />
 
-XXX
+Escribe una función que imprima los tipos de objetos y devuelva 42.
+
+Así es como debería crearse el prototipo:
+
+```python
+def all_thing_is_obj(object: any) -> int:
+#your code here
+```
+
+Tu tester.py:
+
+```python
+from find_ft_type import all_thing_is_obj
+ft_list = ["Hello", "tata!"]
+ft_tuple = ("Hello", "toto!")
+ft_set = {"Hello", "tutu!"}
+ft_dict = {"Hello" : "titi!"}
+all_thing_is_obj(ft_list)
+all_thing_is_obj(ft_tuple)
+all_thing_is_obj(ft_set)
+all_thing_is_obj(ft_dict)
+all_thing_is_obj("Brian")
+all_thing_is_obj("Toto")
+print(all_thing_is_obj(10))
+```
+
+Resultado esperado:
+
+```python
+$>python tester.py | cat -e
+List : <class 'list'>$
+Tuple : <class 'tuple'>$
+Set : <class 'set'>$
+Dict : <class 'dict'>$
+Brian is in the kitchen : <class 'str'>$
+Toto is in the kitchen : <class 'str'>$
+Type not found$
+42$
+$>
+```
+
+```
+Ejecutar la función por sí sola no hace nada.
+```
+
+Resultado esperado:
+
+```python
+$>python find_ft_type.py | cat -e
+$>
+```
+<br /><br />
+[:arrow_up::arrow_up::arrow_up::arrow_up::arrow_up: **top** :arrow_up::arrow_up::arrow_up::arrow_up::arrow_up:](#python-for-data-science)
+<br /><br /><br /><br />
+
+<h3>Exercise 03: NULL not found</h3>
+
+Turn-in directory : ex03/<br />
+Files to turn in : NULL_not_found.py<br />
+Allowed functions : None<br />
+
+Escriba una función que imprima el tipo de objeto de todos los tipos de "Null".
+Devuelva 0 si todo va bien y 1 en caso de error.
+Su función debe imprimir todos los tipos de NULL.
+
+Así es como debería crearse el prototipo:
+
+```python
+def NULL_not_found(object: any) -> int:
+#your code here
+```
+
+Tu tester.py:
+
+```python
+from NULL_not_found import NULL_not_found
+Nothing = None
+Garlic = float("NaN")
+Zero = 0
+Empty = ’’
+Fake = False
+NULL_not_found(Nothing)
+NULL_not_found(Garlic)
+NULL_not_found(Zero)
+NULL_not_found(Empty)
+NULL_not_found(Fake)
+print(NULL_not_found("Brian"))
+```
+
+```
+Empty = ”
+```
+
+Resultado esperado:
+
+```python
+$>python tester.py | cat -e
+Nothing: None <class 'NoneType'>$
+Cheese: nan <class 'float'>$
+Zero: 0 <class 'int'>$
+Empty: <class 'str'>$
+Fake: False <class 'bool'>$
+Type not Found$
+1$
+$>
+```
+
+```
+Ejecutar la función por sí sola no hace nada.
+```
+
+Resultado esperado:
+
+```python
+$>python NULL_not_found.py | cat -e
+$>
+```
 
 <br /><br />
 [:arrow_up::arrow_up::arrow_up::arrow_up::arrow_up: **top** :arrow_up::arrow_up::arrow_up::arrow_up::arrow_up:](#python-for-data-science)
@@ -322,7 +577,7 @@ XXX
 
 Turn-in directory : exXXX/<br />
 Files to turn in : XXX.py<br />
-Forbidden functions : XXX<br />
+Allowed functions : None<br />
 
 XXX
 
@@ -334,7 +589,7 @@ XXX
 
 Turn-in directory : exXXX/<br />
 Files to turn in : XXX.py<br />
-Forbidden functions : XXX<br />
+Allowed functions : None<br />
 
 XXX
 
@@ -346,7 +601,7 @@ XXX
 
 Turn-in directory : exXXX/<br />
 Files to turn in : XXX.py<br />
-Forbidden functions : XXX<br />
+Allowed functions : None<br />
 
 XXX
 
@@ -358,7 +613,7 @@ XXX
 
 Turn-in directory : exXXX/<br />
 Files to turn in : XXX.py<br />
-Forbidden functions : XXX<br />
+Allowed functions : None<br />
 
 XXX
 
@@ -370,7 +625,7 @@ XXX
 
 Turn-in directory : exXXX/<br />
 Files to turn in : XXX.py<br />
-Forbidden functions : XXX<br />
+Allowed functions : None<br />
 
 XXX
 
@@ -382,7 +637,7 @@ XXX
 
 Turn-in directory : exXXX/<br />
 Files to turn in : XXX.py<br />
-Forbidden functions : XXX<br />
+Allowed functions : None<br />
 
 XXX
 
