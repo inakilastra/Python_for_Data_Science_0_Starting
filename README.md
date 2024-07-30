@@ -26,19 +26,19 @@
 
 > Ficheros ex01
 >
-> - :white_check_mark: [Hello.py](#ex00-hello-py) 
+> - :white_check_mark: [format_ft_time.py](#ex01-format_ft_time-py) 
 
 <br /><br />
 
 > Ficheros ex02
 >
-> - :white_check_mark: [Hello.py](#ex00-hello-py) 
+> - :white_check_mark: [find_ft_type.py](#ex02-find_ft_type-py) 
 
 <br /><br />
 
 > Ficheros ex03
 >
-> - :white_check_mark: [Hello.py](#ex00-hello-py) 
+> - :white_check_mark: [NULL_not_found.py](#ex03-null_not_found-py) 
 
 <br /><br />
 
@@ -715,19 +715,200 @@ Cualquiera de estos significa que debes marcar el proyecto como Función Prohibi
 [:arrow_up::arrow_up::arrow_up::arrow_up::arrow_up: **subir** :arrow_up::arrow_up::arrow_up::arrow_up::arrow_up:](#python-for-data-science)
 <br /><br />
 
-<h3>Ex00: XXX</h3>
+<h3>ex00 hello py</h3>
 
-XXX
+```python
+ft_list  = ["Hello", "tata!"]  # Lista
+ft_tuple = ("Hello", "toto!")  # Tupla
+ft_set   = {"Hello", "tutu!"}  # Conjunto
+ft_dict  = {"Hello" : "titi!"} # Diccionario
+#your code here
+ft_list[1] = "World!"            # Modifico la lista
+ft_tuple = ("Hello", "Bizkaia!") # No se puede modificar la tupla, creo una nueva tupla
+ft_set.discard("tutu!")          # Elimino del conjunto
+ft_set.add("Urduliz!")           # Agrego al conjunto
+ft_dict["Hello"] = "42Urduliz!"  # Modifico la referencia "Hello" del diccionario
 
-**XXX**
-
-XXX
+print(ft_list)  # Muestro los 4 tipos por pantalla
+print(ft_tuple)
+print(ft_set)
+print(ft_dict)
+```
 
 <br /><br />
+[:arrow_up::arrow_up::arrow_up::arrow_up::arrow_up: **top** :arrow_up::arrow_up::arrow_up::arrow_up::arrow_up:](#python-for-data-science)
+<br /><br />
 
-**XXX**
+<h3>ex01 format_ft_time py</h3>
 
-XXX
+```python
+import time
+
+# Get the current timestamp in seconds since the epoch (January 1, 1970)
+current_time = time.time()
+
+# Format the timestamp in scientific notation
+scientific_notation = "{:.2e}".format(current_time)
+
+# Format the timestamp as a human-readable date string (month, day, year)
+human_readable_date = time.strftime("%b %d %Y", time.localtime())
+
+# Print the formatted output
+print(f"Seconds since January 1, 1970: {current_time:.2f} or {scientific_notation} in scientific notation")
+print(human_readable_date)
+```
+
+<br /><br />
+[:arrow_up::arrow_up::arrow_up::arrow_up::arrow_up: **top** :arrow_up::arrow_up::arrow_up::arrow_up::arrow_up:](#python-for-data-science)
+<br /><br />
+
+<h3>ex02 find_ft_type py</h3>
+
+```python
+def all_thing_is_obj(object: any) -> int:
+    # Diccionario llamado type_names que mapea tipos de datos built-in a cadenas descriptivas    
+    type_names = {                          
+        list: "List",
+        tuple: "Tuple",
+        set: "Set",
+        dict: "Dict",
+        str: "String"
+    }
+
+    object_type = type(object)
+    # Se intenta obtener un nombre descriptivo para el tipo de objeto usando el diccionario type_names. 
+    # Si no se encuentra, se asigna "Type not found" a type_name                   
+    type_name = type_names.get(object_type, "Type not found")
+
+    if object_type == str:
+        print(f"{object} is in the kitchen : {object_type}")
+    elif type_name != "Type not found":
+        print(f"{type_name} : {object_type}")
+    else:
+        print(f"{type_name}")
+
+    return 42
+
+'''    tester.py
+from find_ft_type import all_thing_is_obj
+
+ft_list = ["Hello", "tata!"]
+ft_tuple = ("Hello", "toto!")
+ft_set = {"Hello", "tutu!"}
+ft_dict = {"Hello" : "titi!"}
+
+all_thing_is_obj(ft_list)
+all_thing_is_obj(ft_tuple)
+all_thing_is_obj(ft_set)
+all_thing_is_obj(ft_dict)
+all_thing_is_obj("Brian")
+all_thing_is_obj("Toto")
+
+print(all_thing_is_obj(10))
+'''
+```
+
+<br /><br />
+[:arrow_up::arrow_up::arrow_up::arrow_up::arrow_up: **top** :arrow_up::arrow_up::arrow_up::arrow_up::arrow_up:](#python-for-data-science)
+<br /><br />
+
+<h3>ex03-null_not_found-py</h3>
+
+```python
+import math                                                # Libreria que proporciona funciones matemáticas (isnan)
+
+def NULL_not_found(object: any) -> int:                    # Esta función identifica y clasifica diferentes tipos de objetos.
+    if object is None:                                     # Si el objeto es exactamente None: Esto identifica claramente los objetos nulos
+        type_name = "Nothing"                              # Se asigna el valor "Nothing" a type_name. 
+    elif isinstance(object, float) and math.isnan(object): # Si el objeto es un número flotante (float) Y es NaN (Not a Number): Esta condición verifica si el objeto es un número flotante y si además es un valor especial NaN.
+        type_name = "Cheese"                               # Se asigna el valor "Cheese" a type_name.
+    elif isinstance(object, bool):                         # Si el objeto es de tipo booleano (bool): Esto identifica los valores True y False.
+        type_name = "Fake"                                 # Se asigna el valor "Fake" a type_name.
+    elif object == 0:                                      # Si el objeto es exactamente igual a 0: Esto identifica el número cero.
+        type_name = "Zero"                                 # Se asigna el valor "Zero" a type_name.
+    elif object == '':                                     # Si el objeto es una cadena vacía: Esto identifica cadenas vacías.
+        type_name = "Empty"                                # Se asigna el valor "Empty" a type_name 
+    else:                                                  # Si no se encuentra una coincidencia
+        print("Type not Found")                            # Imprimo "Type not Found"
+        return 1                                           
+    print(f"{type_name}: {object} {type(object)}")         # Imprimo el nombre del tipo, el objeto y su tipo real
+    return 0
+
+'''  tester.py
+from NULL_not_found import NULL_not_found
+Nothing = None
+Garlic = float("NaN")
+Zero = 0
+Empty = ''
+Fake = False
+NULL_not_found(Nothing)
+NULL_not_found(Garlic)
+NULL_not_found(Zero)
+NULL_not_found(Empty)
+NULL_not_found(Fake)
+print(NULL_not_found("Brian"))
+'''
+```
+
+<br /><br />
+[:arrow_up::arrow_up::arrow_up::arrow_up::arrow_up: **top** :arrow_up::arrow_up::arrow_up::arrow_up::arrow_up:](#python-for-data-science)
+<br /><br />
+
+<h3>Ex04: XXX</h3>
+
+```python
+
+```
+
+<br /><br />
+[:arrow_up::arrow_up::arrow_up::arrow_up::arrow_up: **top** :arrow_up::arrow_up::arrow_up::arrow_up::arrow_up:](#python-for-data-science)
+<br /><br />
+
+<h3>Ex05: XXX</h3>
+
+```python
+
+```
+
+<br /><br />
+[:arrow_up::arrow_up::arrow_up::arrow_up::arrow_up: **top** :arrow_up::arrow_up::arrow_up::arrow_up::arrow_up:](#python-for-data-science)
+<br /><br />
+
+<h3>Ex06: XXX</h3>
+
+```python
+
+```
+
+<br /><br />
+[:arrow_up::arrow_up::arrow_up::arrow_up::arrow_up: **top** :arrow_up::arrow_up::arrow_up::arrow_up::arrow_up:](#python-for-data-science)
+<br /><br />
+
+<h3>Ex07: XXX</h3>
+
+```python
+
+```
+
+<br /><br />
+[:arrow_up::arrow_up::arrow_up::arrow_up::arrow_up: **top** :arrow_up::arrow_up::arrow_up::arrow_up::arrow_up:](#python-for-data-science)
+<br /><br />
+
+<h3>Ex08: XXX</h3>
+
+```python
+
+```
+
+<br /><br />
+[:arrow_up::arrow_up::arrow_up::arrow_up::arrow_up: **top** :arrow_up::arrow_up::arrow_up::arrow_up::arrow_up:](#python-for-data-science)
+<br /><br />
+
+<h3>Ex09: XXX</h3>
+
+```python
+
+```
 
 <br /><br />
 [:arrow_up::arrow_up::arrow_up::arrow_up::arrow_up: **top** :arrow_up::arrow_up::arrow_up::arrow_up::arrow_up:](#python-for-data-science)
