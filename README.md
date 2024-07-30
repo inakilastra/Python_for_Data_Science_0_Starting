@@ -1,6 +1,6 @@
-# Python for Data Science 0 - Starting
+# Python for Data Science
 
-<h1>Python for Data Science 0 - Starting</h1>
+<h1>0 - Starting</h1>
 
 <br /><br />
 
@@ -45,107 +45,270 @@
 - By Odin, by Thor! Use your brain!!!
 
 <br /><br />
-[:arrow_up::arrow_up::arrow_up::arrow_up::arrow_up: **top** :arrow_up::arrow_up::arrow_up::arrow_up::arrow_up:](#python-for-data-science-0---starting)
+[:arrow_up::arrow_up::arrow_up::arrow_up::arrow_up: **top** :arrow_up::arrow_up::arrow_up::arrow_up::arrow_up:](#python-for-data-science)
 <br /><br />
 
 <h3>Exercise 00: XXX</h3>
 
 Turn-in directory : exXXX/<br />
-Files to turn in : Makefile, XXX.cpp<br />
+Files to turn in : XXX.py<br />
 Forbidden functions : XXX<br />
 
 XXX
 
 <br /><br />
-[:arrow_up::arrow_up::arrow_up::arrow_up::arrow_up: **top** :arrow_up::arrow_up::arrow_up::arrow_up::arrow_up:](#cpp00)
+[:arrow_up::arrow_up::arrow_up::arrow_up::arrow_up: **top** :arrow_up::arrow_up::arrow_up::arrow_up::arrow_up:](#python-for-data-science)
+<br /><br /><br /><br />
+
+<h3>Exercise 01: XXX</h3>
+
+Turn-in directory : exXXX/<br />
+Files to turn in : XXX.py<br />
+Forbidden functions : XXX<br />
+
+XXX
+
+<br /><br />
+[:arrow_up::arrow_up::arrow_up::arrow_up::arrow_up: **top** :arrow_up::arrow_up::arrow_up::arrow_up::arrow_up:](#python-for-data-science)
+<br /><br /><br /><br />
+
+<h3>Exercise 02: XXX</h3>
+
+Turn-in directory : exXXX/<br />
+Files to turn in : XXX.py<br />
+Forbidden functions : XXX<br />
+
+XXX
+
+<br /><br />
+[:arrow_up::arrow_up::arrow_up::arrow_up::arrow_up: **top** :arrow_up::arrow_up::arrow_up::arrow_up::arrow_up:](#python-for-data-science)
+<br /><br /><br /><br />
+
+<h3>Exercise 03: XXX</h3>
+
+Turn-in directory : exXXX/<br />
+Files to turn in : XXX.py<br />
+Forbidden functions : XXX<br />
+
+XXX
+
+<br /><br />
+[:arrow_up::arrow_up::arrow_up::arrow_up::arrow_up: **top** :arrow_up::arrow_up::arrow_up::arrow_up::arrow_up:](#python-for-data-science)
+<br /><br /><br /><br />
+
+<h3>Exercise 04: XXX</h3>
+
+Turn-in directory : exXXX/<br />
+Files to turn in : XXX.py<br />
+Forbidden functions : XXX<br />
+
+XXX
+
+<br /><br />
+[:arrow_up::arrow_up::arrow_up::arrow_up::arrow_up: **top** :arrow_up::arrow_up::arrow_up::arrow_up::arrow_up:](#python-for-data-science)
+<br /><br /><br /><br />
+
+<h3>Exercise 05: XXX</h3>
+
+Turn-in directory : exXXX/<br />
+Files to turn in : XXX.py<br />
+Forbidden functions : XXX<br />
+
+XXX
+
+<br /><br />
+[:arrow_up::arrow_up::arrow_up::arrow_up::arrow_up: **top** :arrow_up::arrow_up::arrow_up::arrow_up::arrow_up:](#python-for-data-science)
+<br /><br /><br /><br />
+
+<h3>Exercise 06: XXX</h3>
+
+Turn-in directory : exXXX/<br />
+Files to turn in : XXX.py<br />
+Forbidden functions : XXX<br />
+
+XXX
+
+<br /><br />
+[:arrow_up::arrow_up::arrow_up::arrow_up::arrow_up: **top** :arrow_up::arrow_up::arrow_up::arrow_up::arrow_up:](#python-for-data-science)
+<br /><br /><br /><br />
+
+<h3>Exercise 07: XXX</h3>
+
+Turn-in directory : exXXX/<br />
+Files to turn in : XXX.py<br />
+Forbidden functions : XXX<br />
+
+XXX
+
+<br /><br />
+[:arrow_up::arrow_up::arrow_up::arrow_up::arrow_up: **top** :arrow_up::arrow_up::arrow_up::arrow_up::arrow_up:](#python-for-data-science)
+<br /><br /><br /><br />
+
+<h3>Exercise 08: XXX</h3>
+
+Turn-in directory : exXXX/<br />
+Files to turn in : XXX.py<br />
+Forbidden functions : XXX<br />
+
+XXX
+
+<br /><br />
+[:arrow_up::arrow_up::arrow_up::arrow_up::arrow_up: **top** :arrow_up::arrow_up::arrow_up::arrow_up::arrow_up:](#python-for-data-science)
+<br /><br /><br /><br />
+
+<h3>Exercise 09: XXX</h3>
+
+Turn-in directory : exXXX/<br />
+Files to turn in : XXX.py<br />
+Forbidden functions : XXX<br />
+
+XXX
+
+<br /><br />
+[:arrow_up::arrow_up::arrow_up::arrow_up::arrow_up: **top** :arrow_up::arrow_up::arrow_up::arrow_up::arrow_up:](#python-for-data-science)
 <br /><br /><br /><br />
 
 ## <h2>Subject Castellano</h2>
 
 <h3>Reglas generales</h3>
 
-**Compilando**
-
-- Compila tu código con c++ y los flags -Wall -Wextra -Werror
-
-- Su código aún debería compilarse si agrega el flag -std=c++98
-
-**Convenciones de formato y nomenclatura**
-
-- Los directorios de ejercicios se denominarán de esta forma: ex00, ex01, ... , exn
-
-- Nombra tus archivos, clases, funciones, funciones miembro y atributos según lo requerido en las pautas.
-
-- Escribe nombres de clases en formato **UpperCamelCase**. Los archivos que contienen código de clase siempre se nombrarán según el nombre de la clase. Por ejemplo:
-ClassName.hpp/ClassName.h, ClassName.cpp o ClassName.tpp. Luego, si tiene un archivo de encabezado que contiene la definición de una clase "BrickWall" que representa una pared de ladrillos, su nombre será BrickWall.hpp.
-
-- A menos que se especifique lo contrario, todos los mensajes de salida deben finalizar con un carácter de nueva línea y mostrarse en la salida estándar.
-
-- ¡Adiós Norminette! No se aplica ningún estilo de codificación en los módulos de C++. Puedes seguir tu favorito. Pero tenga en cuenta que un código que sus pares evaluadores no pueden entender es un código que no pueden calificar. Haga todo lo posible para escribir un código limpio y legible.
+- Debes renderizar tus módulos desde una computadora en el cluster usando una máquina virtual:
+    - Puedes elegir el sistema operativo que usarás para tu máquina virtual
+    - Tu máquina virtual debe tener todo el software necesario para realizar tu proyecto. Este software debe estar configurado e instalado.
+- O puedes usar la computadora directamente en caso de que las herramientas estén disponibles.
+    - Asegúrate de tener el espacio en tu sesión para instalar lo que necesitas para todos los módulos (usa goinfre si tu campus lo tiene)
+    - Debes tener todo instalado antes de las evaluaciones
+- Tus funciones no deben cerrarse inesperadamente (error de segmentación, error de bus, doble liberación, etc.) además de comportamientos indefinidos. Si esto sucede, tu proyecto se considerará no funcional y recibirá un 0 durante la evaluación.
+- Te alentamos a crear programas de prueba para tu proyecto, aunque este trabajo **no tendrá que ser entregado y no será calificado**. Te dará la oportunidad de probar fácilmente tu trabajo y el de tus compañeros. Encontrarás esas pruebas especialmente útiles durante tu defensa. De hecho, durante la defensa, eres libre de usar tus pruebas y/o las pruebas del compañero que estás evaluando.
+- Envía tu trabajo al repositorio git que se te haya asignado. Solo se calificará el trabajo en el repositorio git. Si se le asigna a Deepthought la calificación de tu trabajo, se hará después de las evaluaciones de tus compañeros. Si ocurre un error en cualquier sección de tu trabajo durante la calificación de Deepthought, la evaluación se detendrá.
+- Debes usar la versión Python 3.10
+- Puedes usar cualquier función incorporada si no está prohibida en el ejercicio.
+- Tus importaciones de biblioteca deben ser explícitas, por ejemplo, debes "importar numpy como np". Importar "desde pandas import *" no está permitido y obtendrás 0 en el ejercicio.
+- No hay ninguna variable global.
+- ¡Por Odin, por Thor! ¡Usa tu cerebro!
 
 <br /><br />
-
-**Permitido/Prohibido**
-
-Ya no estás codificando en C. ¡Es hora de C++! Por lo tanto:
-
-- Puedes utilizar casi todo lo que hay en la biblioteca estándar. Por lo tanto, en lugar de ceñirse a lo que ya sabe, sería inteligente utilizar tanto como sea posible las versiones tipo C++ de las funciones de C a las que está acostumbrado.
-
-- Sin embargo, no puedes utilizar ninguna otra biblioteca externa. Significa que C++ 11 (y sus formas derivadas) y las bibliotecas Boost están prohibidas. Las siguientes funciones también están prohibidas: *printf(), *alloc() y free(). Si los usas tu nota será 0 y listo.
-
-- Tenga en cuenta que, a menos que se indique explícitamente lo contrario, está prohibido utilizar el espacio de nombres <ns_name> y las palabras clave amigas. En caso contrario, tu nota será -42.
-
-- **Puedes usar el STL solo en los Módulos 08 y 09**. Eso significa: no hay **Contenedores** (vector/lista/mapa/etc.) ni **Algoritmos** (cualquier cosa que requiera incluir el encabezado <algoritmo>) hasta entonces. En caso contrario, tu nota será -42.
-
-<br /><br />
-
-**Algunos requisitos de diseño**
-
-- La pérdida de memoria también ocurre en C++. Cuando asigna memoria (usando la nueva palabra clave), debe evitar **pérdidas de memoria**.
-
-- Desde el Módulo 02 al Módulo 09, tus clases deben estar diseñadas en la **Forma Canónica Ortodoxa, excepto cuando se indique explícitamente lo contrario**.
-
-- Cualquier implementación de función colocada en un archivo de encabezado (excepto las plantillas de función) significa 0 para el ejercicio.
-
-- Deberías poder utilizar cada uno de tus encabezados independientemente de los demás. Por tanto, deben incluir todas las dependencias que necesiten. Sin embargo, debes evitar el problema de la doble inclusión agregando **include guards**. En caso contrario su calificación será 0.
-
-<br /><br />
-
-**Léeme**
-
-- Puede agregar algunos archivos adicionales si es necesario (es decir, dividir su código). Como estas asignaciones no están verificadas por un programa, no dude en hacerlo siempre que entregue los archivos obligatorios.
-
-- A veces, las pautas de un ejercicio parecen breves pero los ejemplos pueden mostrar requisitos que no están escritos explícitamente en las instrucciones.
-
-- ¡Lea cada módulo por completo antes de comenzar! De verdad, hazlo.
-
-- ¡Por Odín, por Thor! ¡¡¡Usa tu cerebro!!!
-
-```
-Tendrás que implementar muchas clases.
-Esto puede parecer tedioso, a menos que puedas programar tu editor de texto favorito.
-```
-
-```
-Se le da cierta libertad para completar los ejercicios.
-Sin embargo, sigue las reglas obligatorias y no seas holgazán.
-¡Te perderías mucha información útil! No dudes en leer sobre conceptos teóricos.
-```
-
-<br /><br />
-[:arrow_up::arrow_up::arrow_up::arrow_up::arrow_up: **subir** :arrow_up::arrow_up::arrow_up::arrow_up::arrow_up:](#cpp00)
+[:arrow_up::arrow_up::arrow_up::arrow_up::arrow_up: **subir** :arrow_up::arrow_up::arrow_up::arrow_up::arrow_up:](#python-for-data-science)
 <br /><br />
 
 <h3>Exercise 00: XXX</h3>
 
-Turn-in directory : exXX/<br />
-Files to turn in : Makefile, XXX.cpp<br />
+Turn-in directory : exXXX/<br />
+Files to turn in : XXX.py<br />
 Forbidden functions : XXX<br />
 
 XXX
 
 <br /><br />
-[:arrow_up::arrow_up::arrow_up::arrow_up::arrow_up: **subir** :arrow_up::arrow_up::arrow_up::arrow_up::arrow_up:](#cpp00)
+[:arrow_up::arrow_up::arrow_up::arrow_up::arrow_up: **top** :arrow_up::arrow_up::arrow_up::arrow_up::arrow_up:](#python-for-data-science)
+<br /><br /><br /><br />
+
+<h3>Exercise 01: XXX</h3>
+
+Turn-in directory : exXXX/<br />
+Files to turn in : XXX.py<br />
+Forbidden functions : XXX<br />
+
+XXX
+
+<br /><br />
+[:arrow_up::arrow_up::arrow_up::arrow_up::arrow_up: **top** :arrow_up::arrow_up::arrow_up::arrow_up::arrow_up:](#python-for-data-science)
+<br /><br /><br /><br />
+
+<h3>Exercise 02: XXX</h3>
+
+Turn-in directory : exXXX/<br />
+Files to turn in : XXX.py<br />
+Forbidden functions : XXX<br />
+
+XXX
+
+<br /><br />
+[:arrow_up::arrow_up::arrow_up::arrow_up::arrow_up: **top** :arrow_up::arrow_up::arrow_up::arrow_up::arrow_up:](#python-for-data-science)
+<br /><br /><br /><br />
+
+<h3>Exercise 03: XXX</h3>
+
+Turn-in directory : exXXX/<br />
+Files to turn in : XXX.py<br />
+Forbidden functions : XXX<br />
+
+XXX
+
+<br /><br />
+[:arrow_up::arrow_up::arrow_up::arrow_up::arrow_up: **top** :arrow_up::arrow_up::arrow_up::arrow_up::arrow_up:](#python-for-data-science)
+<br /><br /><br /><br />
+
+<h3>Exercise 04: XXX</h3>
+
+Turn-in directory : exXXX/<br />
+Files to turn in : XXX.py<br />
+Forbidden functions : XXX<br />
+
+XXX
+
+<br /><br />
+[:arrow_up::arrow_up::arrow_up::arrow_up::arrow_up: **top** :arrow_up::arrow_up::arrow_up::arrow_up::arrow_up:](#python-for-data-science)
+<br /><br /><br /><br />
+
+<h3>Exercise 05: XXX</h3>
+
+Turn-in directory : exXXX/<br />
+Files to turn in : XXX.py<br />
+Forbidden functions : XXX<br />
+
+XXX
+
+<br /><br />
+[:arrow_up::arrow_up::arrow_up::arrow_up::arrow_up: **top** :arrow_up::arrow_up::arrow_up::arrow_up::arrow_up:](#python-for-data-science)
+<br /><br /><br /><br />
+
+<h3>Exercise 06: XXX</h3>
+
+Turn-in directory : exXXX/<br />
+Files to turn in : XXX.py<br />
+Forbidden functions : XXX<br />
+
+XXX
+
+<br /><br />
+[:arrow_up::arrow_up::arrow_up::arrow_up::arrow_up: **top** :arrow_up::arrow_up::arrow_up::arrow_up::arrow_up:](#python-for-data-science)
+<br /><br /><br /><br />
+
+<h3>Exercise 07: XXX</h3>
+
+Turn-in directory : exXXX/<br />
+Files to turn in : XXX.py<br />
+Forbidden functions : XXX<br />
+
+XXX
+
+<br /><br />
+[:arrow_up::arrow_up::arrow_up::arrow_up::arrow_up: **top** :arrow_up::arrow_up::arrow_up::arrow_up::arrow_up:](#python-for-data-science)
+<br /><br /><br /><br />
+
+<h3>Exercise 08: XXX</h3>
+
+Turn-in directory : exXXX/<br />
+Files to turn in : XXX.py<br />
+Forbidden functions : XXX<br />
+
+XXX
+
+<br /><br />
+[:arrow_up::arrow_up::arrow_up::arrow_up::arrow_up: **top** :arrow_up::arrow_up::arrow_up::arrow_up::arrow_up:](#python-for-data-science)
+<br /><br /><br /><br />
+
+<h3>Exercise 09: XXX</h3>
+
+Turn-in directory : exXXX/<br />
+Files to turn in : XXX.py<br />
+Forbidden functions : XXX<br />
+
+XXX
+
+<br /><br />
+[:arrow_up::arrow_up::arrow_up::arrow_up::arrow_up: **top** :arrow_up::arrow_up::arrow_up::arrow_up::arrow_up:](#python-for-data-science)
 <br /><br /><br /><br />
 
 ## <h2>Evaluation</h2>
@@ -187,7 +350,7 @@ XXX
 XXX
 
 <br /><br />
-[:arrow_up::arrow_up::arrow_up::arrow_up::arrow_up: **top** :arrow_up::arrow_up::arrow_up::arrow_up::arrow_up:](#cpp00)
+[:arrow_up::arrow_up::arrow_up::arrow_up::arrow_up: **top** :arrow_up::arrow_up::arrow_up::arrow_up::arrow_up:](#python-for-data-science)
 <br /><br /><br /><br />
 
 ## <h2>Evaluación</h2>
@@ -215,7 +378,7 @@ Cualquiera de estos significa que debes marcar el proyecto como Función Prohibi
 - Uso de una biblioteca externa o funciones de C++20
 
 <br /><br />
-[:arrow_up::arrow_up::arrow_up::arrow_up::arrow_up: **subir** :arrow_up::arrow_up::arrow_up::arrow_up::arrow_up:](#cpp00)
+[:arrow_up::arrow_up::arrow_up::arrow_up::arrow_up: **subir** :arrow_up::arrow_up::arrow_up::arrow_up::arrow_up:](#python-for-data-science)
 <br /><br />
 
 <h3>Ex00: XXX</h3>
@@ -233,5 +396,5 @@ XXX
 XXX
 
 <br /><br />
-[:arrow_up::arrow_up::arrow_up::arrow_up::arrow_up: **top** :arrow_up::arrow_up::arrow_up::arrow_up::arrow_up:](#cpp00)
+[:arrow_up::arrow_up::arrow_up::arrow_up::arrow_up: **top** :arrow_up::arrow_up::arrow_up::arrow_up::arrow_up:](#python-for-data-science)
 <br /><br /><br /><br />
