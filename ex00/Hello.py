@@ -9,7 +9,7 @@ ft_set.discard("tutu!")          # Elimino del conjunto
 ft_set.add("Urduliz!")           # Agrego al conjunto
 ft_dict["Hello"] = "42Urduliz!"  # Modifico la referencia "Hello" del diccionario
 
-print(ft_list)
+print(ft_list)  # Muestro los 4 tipos por pantalla
 print(ft_tuple)
 print(ft_set)
 print(ft_dict)
