@@ -44,7 +44,7 @@
 
 > Ficheros ex04
 >
-> - :white_check_mark: [Hello.py](#ex00-hello-py) 
+> - :white_check_mark: [whatis.py](#ex04-whatis-py) 
 
 <br /><br />
 
@@ -290,13 +290,37 @@ $>
 [:arrow_up::arrow_up::arrow_up::arrow_up::arrow_up: **top** :arrow_up::arrow_up::arrow_up::arrow_up::arrow_up:](#python-for-data-science)
 <br /><br /><br /><br />
 
-<h3>Exercise 04: XXX</h3>
+<h3>Exercise 04: The Even and the Odd</h3>
 
-Turn-in directory : exXXX/<br />
-Files to turn in : XXX.py<br />
-Allowed functions : None<br />
+Turn-in directory : ex04/<br />
+Files to turn in : whatis.py<br />
+Allowed functions : sys or any other library that allows to receive the args<br />
 
-XXX
+Create a script that takes a number as argument, checks whether it is odd or even, and prints the result.
+
+If more than one argument is provided or if the argument is not an integer, print an **AssertionError**.
+
+Expected output:
+
+```python
+$> python whatis.py 14
+I'm Even.
+$>
+$> python whatis.py -5
+I'm Odd.
+$>
+$> python whatis.py
+$>
+$> python whatis.py 0
+I'm Even.
+$>
+$> python whatis.py Hi!
+AssertionError: argument is not an integer
+$>
+$> python whatis.py 13 5
+AssertionError: more than one argument is provided
+$>
+```
 
 <br /><br />
 [:arrow_up::arrow_up::arrow_up::arrow_up::arrow_up: **top** :arrow_up::arrow_up::arrow_up::arrow_up::arrow_up:](#python-for-data-science)
@@ -573,13 +597,37 @@ $>
 [:arrow_up::arrow_up::arrow_up::arrow_up::arrow_up: **top** :arrow_up::arrow_up::arrow_up::arrow_up::arrow_up:](#python-for-data-science)
 <br /><br /><br /><br />
 
-<h3>Exercise 04: XXX</h3>
+<h3>Exercise 04: The Even and the Odd</h3>
 
-Turn-in directory : exXXX/<br />
-Files to turn in : XXX.py<br />
-Allowed functions : None<br />
+Turn-in directory : ex04/<br />
+Files to turn in : whatis.py<br />
+Allowed functions : sys or any other library that allows to receive the args<br />
 
-XXX
+Crear un script que tome un número como argumento, verifique si es par o impar e imprima el resultado.
+
+Si se proporciona más de un argumento o si el argumento no es un entero, imprima un **AssertionError**.
+
+Resultado esperado:
+
+```python
+$> python whatis.py 14
+I'm Even.
+$>
+$> python whatis.py -5
+I'm Odd.
+$>
+$> python whatis.py
+$>
+$> python whatis.py 0
+I'm Even.
+$>
+$> python whatis.py Hi!
+AssertionError: argument is not an integer
+$>
+$> python whatis.py 13 5
+AssertionError: more than one argument is provided
+$>
+```
 
 <br /><br />
 [:arrow_up::arrow_up::arrow_up::arrow_up::arrow_up: **top** :arrow_up::arrow_up::arrow_up::arrow_up::arrow_up:](#python-for-data-science)
@@ -649,40 +697,6 @@ XXX
 
 <h3>Guidelines</h3>
 
-You must compile with clang++, with -Wall -Wextra -Werror 
-As a reminder, this project is in C++98.
-C++11 (and later) members functions or containers are NOT expected.
-
-Any of these means you must not grade the exercise in question:
-
-- A function is implemented in a header (except in a template)
-
-- A Makefile compiles without flags and/or with something other than clang++
-
-Any of these means that you must flag the project as Forbidden Function:
-
-- Use of a "C" function (*alloc, *printf, free)
-
-- Use of a function not allowed in the subject
-
-- Use of "using namespace" or "friend"
-
-- Use of an external library, or C++20 features
-
-<h3>Ex00: XXX</h3>
-
-XXX
-
-**XXX**
-
-XXX
-
-<br /><br />
-
-**XXX**
-
-XXX
-
 <br /><br />
 [:arrow_up::arrow_up::arrow_up::arrow_up::arrow_up: **top** :arrow_up::arrow_up::arrow_up::arrow_up::arrow_up:](#python-for-data-science)
 <br /><br /><br /><br />
@@ -690,26 +704,6 @@ XXX
 ## <h2>Evaluación</h2>
 
 <h3>Pautas</h3>
-
-Debes compilar con clang++, con -Wall -Wextra -Werror
-Como recordatorio, este proyecto está en C++98.
-NO se esperan funciones de miembros o contenedores de C++ 11 (y posteriores).
-
-Cualquiera de estos significa que no debes calificar el ejercicio en cuestión:
-
-- Una función se implementa en un encabezado (excepto en una plantilla)
-
-- Un Makefile se compila sin banderas y/o con algo distinto a clang++
-
-Cualquiera de estos significa que debes marcar el proyecto como Función Prohibida:
-
-- Uso de una función "C" (*alloc, *printf, gratis)
-
-- Uso de una función no permitida en el tema.
-
-- Uso de "usar espacio de nombres" o "amigo"
-
-- Uso de una biblioteca externa o funciones de C++20
 
 <br /><br />
 [:arrow_up::arrow_up::arrow_up::arrow_up::arrow_up: **subir** :arrow_up::arrow_up::arrow_up::arrow_up::arrow_up:](#python-for-data-science)
@@ -812,7 +806,7 @@ print(all_thing_is_obj(10))
 [:arrow_up::arrow_up::arrow_up::arrow_up::arrow_up: **top** :arrow_up::arrow_up::arrow_up::arrow_up::arrow_up:](#python-for-data-science)
 <br /><br />
 
-<h3>ex03-null_not_found-py</h3>
+<h3>ex03 null_not_found py</h3>
 
 ```python
 import math                                                # Libreria que proporciona funciones matemáticas (isnan)
@@ -854,10 +848,30 @@ print(NULL_not_found("Brian"))
 [:arrow_up::arrow_up::arrow_up::arrow_up::arrow_up: **top** :arrow_up::arrow_up::arrow_up::arrow_up::arrow_up:](#python-for-data-science)
 <br /><br />
 
-<h3>Ex04: XXX</h3>
+<h3>ex04 whatis py</h3>
 
 ```python
+import sys                        # Se utiliza para acceder a los argumentos de línea de comandos pasados al script
 
+def is_event(number):             # Esta función toma un número como entrada y determina si es par o impar
+  if number % 2 == 0:             # Si el número dividido por 2 tiene resto 0 (es decir, es divisible por 2 por lo tanto par)
+    return "I'm Even."
+  else:
+    return "I'm Odd."    
+
+if __name__ == "__main__":        # Este bloque de código se ejecuta cuando el script se ejecuta directamente, no cuando se importa como módulo.
+    try:                          # El bloque try-except maneja posibles errores
+      if len(sys.argv) == 2:      # Si se ha proporcionado exactamente un argumento (además del nombre del script)
+        number = int(sys.argv[1]) # Convierto el segundo argumento (índice 1 en sys.argv) a un entero
+        print(is_event(number))
+      elif len(sys.argv) > 2:     # Si se han proporcionado más de un argumento, muestra un mensaje de error indicando que solo se permite un argumento
+        print("AssertionError: more than one argument is provided")
+      else:                       # Si no se ha proporcionado ningún argumento, no hace nada 
+        print("")
+    except ValueError:            # Si ocurre un ValueError, significa que el argumento no se pudo convertir a un entero
+      print("AssertionError: argument is not an integer")
+    except AssertionError as e:   # Si ocurre una AssertionError, se imprime el mensaje de error original.
+      print(e) 
 ```
 
 <br /><br />
