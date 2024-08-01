@@ -50,7 +50,7 @@
 
 > Ficheros ex05
 >
-> - :white_check_mark: [Hello.py](#ex00-hello-py) 
+> - :white_check_mark: [building.py](#ex05-building-py) 
 
 <br /><br />
 
@@ -326,13 +326,100 @@ $>
 [:arrow_up::arrow_up::arrow_up::arrow_up::arrow_up: **top** :arrow_up::arrow_up::arrow_up::arrow_up::arrow_up:](#python-for-data-science)
 <br /><br /><br /><br />
 
-<h3>Exercise 05: XXX</h3>
+<h3>From now on you must follow these additional rules</h3>
 
-Turn-in directory : exXXX/<br />
-Files to turn in : XXX.py<br />
-Allowed functions : None<br />
+- No code in the global scope. Use functions!
+- Each program must have its main and not be a simple script:
 
-XXX
+```python
+def main():
+# your tests and your error handling
+if __name__ == "__main__":
+main()
+```
+
+- Any exception not caught will invalidate the exercices, even in the event of an error
+that you were asked to test.
+- All your functions must have a documentation (__doc__)
+- Your code must be at the norm
+    - pip install flake8
+    - alias norminette=flake8
+
+
+469 / 5.000
+***The following note is not from the subject, it is my interpretation***
+Example of code following the new rules
+
+```python
+def my_function(argument):
+"""This function does something with an argument.
+
+Args:
+argument: A value of any type.
+
+Returns:
+The result of the operation.
+"""
+# Function code
+
+def main():
+try:
+result = my_function(value)
+except Exception as e:
+print(f"Error: {e}")
+
+if __name__ == "__main__":
+main()
+```    
+
+<br /><br />
+[:arrow_up::arrow_up::arrow_up::arrow_up::arrow_up: **top** :arrow_up::arrow_up::arrow_up::arrow_up::arrow_up:](#python-for-data-science)
+<br /><br /><br /><br />
+
+<h3>Exercise 05: First standalone program python</h3>
+
+Turn-in directory : ex05/<br />
+Files to turn in : building.py<br />
+Allowed functions : sys or any other library that allows to receive the args<br />
+
+This time you have to make a real autonomous program, with a main, which takes a single string argument and displays the sums of its upper-case characters, lower-case characters, punctuation characters, digits and spaces.
+
+- If None or nothing is provided, the user is prompted to provide a string.
+- If more than one argument is provided to the program, print an AssertionError.
+
+Expected outputs:
+
+```python
+$>python building.py "Python 3.0, released in 2008, was a major revision that is not completely backward-compatible with earlier versions. Python 2 was discontinued with version 2.7.18 in 2020."
+The text contains 171 characters:
+2 upper letters
+121 lower letters
+8 punctuation marks
+25 spaces
+15 digits
+$>
+```
+
+Expected outputs: (the carriage return counts as a space, if you don’t want to return
+one use ctrl + D)
+
+```python
+$>python building.py
+What is the text to count?
+Hello World!
+The text contains 13 characters:
+2 upper letters
+8 lower letters
+1 punctuation marks
+2 spaces
+0 digits
+$>
+```
+
+```
+By Odin, by Thor ! Use your brain !!! Don’t reinvent the wheel, use
+the language features.
+```
 
 <br /><br />
 [:arrow_up::arrow_up::arrow_up::arrow_up::arrow_up: **top** :arrow_up::arrow_up::arrow_up::arrow_up::arrow_up:](#python-for-data-science)
@@ -633,13 +720,94 @@ $>
 [:arrow_up::arrow_up::arrow_up::arrow_up::arrow_up: **top** :arrow_up::arrow_up::arrow_up::arrow_up::arrow_up:](#python-for-data-science)
 <br /><br /><br /><br />
 
-<h3>Exercise 05: XXX</h3>
+<h3>A partir de ahora debes seguir estas reglas adicionales</h3>
 
-Turn-in directory : exXXX/<br />
-Files to turn in : XXX.py<br />
-Allowed functions : None<br />
+- No hay código en el ámbito global. ¡Usa funciones!
+- Cada programa debe tener su main y no ser un simple script:
 
-XXX
+```python
+def main():
+# your tests and your error handling
+if __name__ == "__main__":
+main()
+```
+
+- Cualquier excepción no capturada invalidará los ejercicios, incluso en el caso de un error que se te pidió que probaras.
+- Todas tus funciones deben tener una documentación (__doc__)
+- Tu código debe estar en la norma
+- pip install flake8
+- alias norminette=flake8
+
+***El siguiente apunte no es del subject, es mi interpretación***
+Ejemplo de código siguiendo las nuevas normas
+
+```python
+def mi_funcion(argumento):
+  """Esta función hace algo con un argumento.
+
+  Args:
+    argumento: Un valor de cualquier tipo.
+
+  Returns:
+    El resultado de la operación.
+  """
+  # Código de la función
+
+def main():
+  try:
+    resultado = mi_funcion(valor)
+  except Exception as e:
+    print(f"Error: {e}")
+
+if __name__ == "__main__":
+  main()
+```
+<br /><br />
+[:arrow_up::arrow_up::arrow_up::arrow_up::arrow_up: **top** :arrow_up::arrow_up::arrow_up::arrow_up::arrow_up:](#python-for-data-science)
+<br /><br /><br /><br />
+
+<h3>Exercise 05: First standalone program python</h3>
+
+Turn-in directory : ex05/<br />
+Files to turn in : building.py<br />
+Allowed functions : sys or any other library that allows to receive the args<br />
+
+Esta vez tienes que hacer un programa autónomo real, con un main, que toma un único argumento de cadena y muestra las sumas de sus caracteres en mayúsculas, minúsculas, signos de puntuación, dígitos y espacios.
+
+- Si se proporciona None o nada, se le solicita al usuario que proporcione una cadena.
+- Si se proporciona más de un argumento al programa, imprime un AssertionError.
+
+Resultados esperados:
+
+```python
+$>python building.py "Python 3.0, released in 2008, was a major revision that is not completely backward-compatible with earlier versions. Python 2 was discontinued with version 2.7.18 in 2020."
+The text contains 171 characters:
+2 upper letters
+121 lower letters
+8 punctuation marks
+25 spaces
+15 digits
+$>
+```
+
+Resultados esperados: (el retorno de carro cuenta como un espacio, si no desea devolver uno, use Ctrl + D)
+
+```python
+$>python building.py
+What is the text to count?
+Hello World!
+The text contains 13 characters:
+2 upper letters
+8 lower letters
+1 punctuation marks
+2 spaces
+0 digits
+$>
+```
+
+```
+¡Por Odín, por Thor! ¡Usa tu cerebro! No reinventes la rueda, utiliza las características del lenguaje.
+```
 
 <br /><br />
 [:arrow_up::arrow_up::arrow_up::arrow_up::arrow_up: **top** :arrow_up::arrow_up::arrow_up::arrow_up::arrow_up:](#python-for-data-science)
@@ -878,10 +1046,64 @@ if __name__ == "__main__":        # Este bloque de código se ejecuta cuando el 
 [:arrow_up::arrow_up::arrow_up::arrow_up::arrow_up: **top** :arrow_up::arrow_up::arrow_up::arrow_up::arrow_up:](#python-for-data-science)
 <br /><br />
 
-<h3>Ex05: XXX</h3>
+<h3>ex05 building py</h3>
 
 ```python
+import sys                      # Proporciona acceso a variables y funciones del sistema operativo, como argumentos en la línea de comandos
+from collections import Counter # Importa la clase Counter del módulo collections que permite crear contadores de elementos en una colección (como una cadena de texto).
 
+def count_chars(text):          # Función que recibe un argumento text (que será la cadena de texto a analizar).
+    '''
+    Counts the occurrences of different character types in a string.
+
+    Args:
+        text: The string to analyze.
+
+    Returns:
+        A dictionary where keys are character types ("upper", "lower", 
+        "punctuation", "digit", "space") and values are their counts.
+    '''
+    char_counts = Counter()     # Crea un objeto char_counts de la clase Counter. Este objeto actuará como un diccionario donde se guardarán el conteo de cada tipo de carácter.
+
+    for char in text:           # Recorre cada carácter individual (char) en la cadena text.
+        if char.isupper():
+            char_counts["upper"] += 1
+        elif char.islower():
+            char_counts["lower"] += 1
+        elif char.isdigit():
+            char_counts["digit"] += 1
+        elif char.isspace():
+            char_counts["space"] += 1
+        else:
+            char_counts["punctuation"] += 1
+    return char_counts
+
+def main():
+    try:                          # El bloque try-except maneja posibles errores
+      if len(sys.argv) == 1:      # Si no hay argumentos, se imprime un mensaje indicando que el usuario debe introducir el texto y presionar Ctrl+D para finalizar
+        print("What is the text to count? Press Ctrl+D to end input.")
+        text = sys.stdin.read()   # Lee toda la entrada incluyendo retornos de carro
+      elif len(sys.argv) == 2:    # Si se ha proporcionado exactamente un argumento (además del nombre del script)        
+        text = sys.argv[1]        # Se asigna el argumento 
+      else:                       # Si se han proporcionado más de un argumento, muestra un mensaje de error indicando que solo se permite un argumento
+        print("Only one argument is allowed.")
+        return                    
+    except AssertionError as e:   # Si ocurre una AssertionError, se imprime el mensaje de error original.
+      print(e) 
+      return
+
+    char_counts = count_chars(text)         # Llama a la función count_chars para obtener el conteo de caracteres.
+    total_chars = sum(char_counts.values()) # Calcula el total de caracteres sumando los valores de todas las claves en el diccionario char_counts.
+
+    print(f"The text contains {total_chars} characters:")
+    print(f"{char_counts['upper']} upper letter{'s' if char_counts['upper'] != 1 else ''}")
+    print(f"{char_counts['lower']} lower letter{'s' if char_counts['lower'] != 1 else ''}")
+    print(f"{char_counts['punctuation']} punctuation mark{'s' if char_counts['punctuation'] != 1 else ''}")
+    print(f"{char_counts['space']} space{'s' if char_counts['space'] != 1 else ''}")
+    print(f"{char_counts['digit']} digit{'s' if char_counts['digit'] != 1 else ''}")
+
+if __name__ == "__main__":
+    main()
 ```
 
 <br /><br />
