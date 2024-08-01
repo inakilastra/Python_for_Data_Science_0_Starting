@@ -346,7 +346,6 @@ that you were asked to test.
     - alias norminette=flake8
 
 
-469 / 5.000
 ***The following note is not from the subject, it is my interpretation***
 Example of code following the new rules
 
@@ -425,49 +424,179 @@ the language features.
 [:arrow_up::arrow_up::arrow_up::arrow_up::arrow_up: **top** :arrow_up::arrow_up::arrow_up::arrow_up::arrow_up:](#python-for-data-science)
 <br /><br /><br /><br />
 
-<h3>Exercise 06: XXX</h3>
+<h3>Exercise 06:</h3>
 
-Turn-in directory : exXXX/<br />
-Files to turn in : XXX.py<br />
-Allowed functions : None<br />
+Turn-in directory : ex06/<br />
+Files to turn in : ft_filter.py, filterstring.py<br />
+Allowed functions : sys or any other library that allows to receive the args<br />
 
-XXX
+***Part 1: Recode filter function***
+
+Recode your own ft_filter, it should behave like the original built-in function (it should return the same thing as "print(filter.__doc__)"), you should use **list comprehensions** to recode your ft_filter.
+
+```
+Of course using the original filter built-in is forbidden
+```
+
+```
+You can validate the module from here, but we encourage you to
+continue as there are things you will need to know for the following
+projects
+```
+***Part 2: The program***
+
+Create a program that accepts two arguments: a string(S), and an integer(N). The
+program should output a list of words from **S** that have a length greater than **N**.
+- Words are separated from each other by space characters.
+- Strings do not contain any special characters. (Punctuation or invisible)
+- The program must contain at least one **list comprehension** expression and one **lambda**.
+- If the number of argument is different from 2, or if the type of any argument is wrong, the program prints an **AssertionError**.
+
+Expected outputs:
+
+```
+$> python filterstring.py 'Hello the World' 4
+['Hello', 'World']
+$>
+```
+
+```
+$> python filterstring.py 'Hello the World' 99
+[]
+$>
+```
+
+```
+$> python filterstring.py 3 'Hello the World'
+AssertionError: the arguments are bad
+$>
+```
+
+```
+$> python filterstring.py
+AssertionError: the arguments are bad
+$>
+```
 
 <br /><br />
 [:arrow_up::arrow_up::arrow_up::arrow_up::arrow_up: **top** :arrow_up::arrow_up::arrow_up::arrow_up::arrow_up:](#python-for-data-science)
 <br /><br /><br /><br />
 
-<h3>Exercise 07: XXX</h3>
+<h3>Exercise 07: Dictionaries SoS</h3>
 
-Turn-in directory : exXXX/<br />
-Files to turn in : XXX.py<br />
-Allowed functions : None<br />
+Turn-in directory : ex07/<br />
+Files to turn in : sos.py<br />
+Allowed functions : sys or any other library that allows to receive the args<br />
 
-XXX
+Make a program that takes a string as an argument and encodes it into Morse Code.
+
+- The program supports space and alphanumeric characters
+- An alphanumeric character is represented by dots . and dashes -
+- Complete morse characters are separated by a single space
+- A space character is represented by a slash /
+
+You must use a dictionary to store your morse code.
+
+```
+NESTED_MORSE = { " ": "/ ",
+"A": ".- ",
+...
+```
+
+If the number of arguments is different from 1, or if the type of any argument is wrong, the program prints an **AssertionError**.
+
+```
+$> python sos.py "sos" | cat -e
+... --- ...$
+$> python sos.py 'h$llo'
+AssertionError: the arguments are bad
+$>
+```
 
 <br /><br />
 [:arrow_up::arrow_up::arrow_up::arrow_up::arrow_up: **top** :arrow_up::arrow_up::arrow_up::arrow_up::arrow_up:](#python-for-data-science)
 <br /><br /><br /><br />
 
-<h3>Exercise 08: XXX</h3>
+<h3>Exercise 08: Loading ...</h3>
 
-Turn-in directory : exXXX/<br />
-Files to turn in : XXX.py<br />
+Turn-in directory : ex08/<br />
+Files to turn in : Loading.py<br />
 Allowed functions : None<br />
 
-XXX
+So let’s create a function called ft_tqdm.
+The function must copy the function tqdm with the yield operator.
+
+Here’s how it should be prototyped:
+
+```python
+def ft_tqdm(lst: range) -> None:
+#your code here
+```
+
+Your tester.py: (you compare your version with the original)
+
+```python
+from time import sleep
+from tqdm import tqdm
+from Loading import ft_tqdm
+for elem in ft_tqdm(range(333)):
+sleep(0.005)
+print()
+for elem in tqdm(range(333)):
+sleep(0.005)
+print()
+```
+
+Expected output: (you must have a function as close as possible to the original version)
+
+```python
+$> python tester.py
+100%|[===============================================================>]| 333/333
+100%|                                                                  | 333/333 [00:01<00:00, 191.61it/s]
+```
 
 <br /><br />
 [:arrow_up::arrow_up::arrow_up::arrow_up::arrow_up: **top** :arrow_up::arrow_up::arrow_up::arrow_up::arrow_up:](#python-for-data-science)
 <br /><br /><br /><br />
 
-<h3>Exercise 09: XXX</h3>
+<h3>Exercise 09: My first package creation</h3>
 
-Turn-in directory : exXXX/<br />
-Files to turn in : XXX.py<br />
-Allowed functions : None<br />
+Turn-in directory : ex09/<br />
+Files to turn in : *.py, *.txt, *.toml, README.md, LICENSE<br />
+Allowed functions : PyPI or any library for creation package<br />
 
-XXX
+Create your first package in python the way you want, it will appear in the list of installed packages when you type the command "pip list" and display its characteristics when you type "pip show -v ft_package"
+
+```python
+$>pip show -v ft_package
+Name: ft_package
+Version: 0.0.1
+Summary: A sample test package
+Home-page: https://github.com/eagle/ft_package
+Author: eagle
+Author-email: eagle@42.fr
+License: MIT
+Location: /home/eagle/...
+Requires:
+Required-by:
+Metadata-Version: 2.1
+Installer: pip
+Classifiers:
+Entry-points:
+$>
+```
+
+The package will be installed via pip using one of the following commands (both should work):
+- pip install ./dist/ft_package-0.0.1.tar.gz
+- pip install ./dist/ft_package-0.0.1-py3-none-any.whl
+
+Your package must be able to be called from a script like this one:
+
+```python
+from ft_package import count_in_list
+print(count_in_list(["toto", "tata", "toto"], "toto")) # output: 2
+print(count_in_list(["toto", "tata", "toto"], "tutu")) # output: 0
+```
 
 <br /><br />
 [:arrow_up::arrow_up::arrow_up::arrow_up::arrow_up: **top** :arrow_up::arrow_up::arrow_up::arrow_up::arrow_up:](#python-for-data-science)
@@ -813,49 +942,179 @@ $>
 [:arrow_up::arrow_up::arrow_up::arrow_up::arrow_up: **top** :arrow_up::arrow_up::arrow_up::arrow_up::arrow_up:](#python-for-data-science)
 <br /><br /><br /><br />
 
-<h3>Exercise 06: XXX</h3>
+<h3>Exercise 06:</h3>
 
-Turn-in directory : exXXX/<br />
-Files to turn in : XXX.py<br />
-Allowed functions : None<br />
+Turn-in directory : ex06/<br />
+Files to turn in : ft_filter.py, filterstring.py<br />
+Allowed functions : sys or any other library that allows to receive the args<br />
 
-XXX
+***Parte 1: Recodificar la función de filtro***
+
+Recodifica tu propio ft_filter, debería comportarse como la función incorporada original (debería devolver lo mismo que "print(filter.__doc__)"), deberías usar **comprensiones de listas** para recodificar tu ft_filter.
+
+```
+Por supuesto, está prohibido usar el filtro original incorporado
+```
+
+```
+Puede validar el módulo desde aquí, pero le recomendamos que
+continúe ya que hay cosas que necesitará saber para los siguientes
+proyectos
+```
+***Parte 2: El programa***
+
+Cree un programa que acepte dos argumentos: una cadena(S) y un entero(N). El
+programa debe generar una lista de palabras de **S** que tengan una longitud mayor que **N**.
+- Las palabras están separadas entre sí por caracteres de espacio.
+- Las cadenas no contienen ningún carácter especial (puntuación o invisible)
+- El programa debe contener al menos una **expresión de comprensión de lista** y una **lambda**.
+- Si el número de argumentos es diferente de 2, o si el tipo de algún argumento es incorrecto, el programa imprime un **AssertionError**.
+
+Resultados esperados:
+
+```
+$> python filterstring.py 'Hello the World' 4
+['Hello', 'World']
+$>
+```
+
+```
+$> python filterstring.py 'Hello the World' 99
+[]
+$>
+```
+
+```
+$> python filterstring.py 3 'Hello the World'
+AssertionError: the arguments are bad
+$>
+```
+
+```
+$> python filterstring.py
+AssertionError: the arguments are bad
+$>
+```
 
 <br /><br />
 [:arrow_up::arrow_up::arrow_up::arrow_up::arrow_up: **top** :arrow_up::arrow_up::arrow_up::arrow_up::arrow_up:](#python-for-data-science)
 <br /><br /><br /><br />
 
-<h3>Exercise 07: XXX</h3>
+<h3>Exercise 07: Dictionaries SoS</h3>
 
-Turn-in directory : exXXX/<br />
-Files to turn in : XXX.py<br />
-Allowed functions : None<br />
+Turn-in directory : ex07/<br />
+Files to turn in : sos.py<br />
+Allowed functions : sys or any other library that allows to receive the args<br />
 
-XXX
+Realice un programa que tome una cadena como argumento y la codifique en código Morse.
+
+- El programa admite espacios y caracteres alfanuméricos
+- Un carácter alfanumérico se representa con puntos . y guiones -
+- Los caracteres Morse completos se separan con un solo espacio
+- Un carácter de espacio se representa con una barra /
+
+Debe utilizar un diccionario para almacenar su código Morse.
+
+```
+NESTED_MORSE = { " ": "/ ",
+"A": ".- ",
+...
+```
+
+Si el número de argumentos es diferente de 1, o si el tipo de algún argumento es incorrecto, el programa imprime un **AssertionError**.
+
+```
+$> python sos.py "sos" | cat -e
+... --- ...$
+$> python sos.py 'h$llo'
+AssertionError: the arguments are bad
+$>
+```
 
 <br /><br />
 [:arrow_up::arrow_up::arrow_up::arrow_up::arrow_up: **top** :arrow_up::arrow_up::arrow_up::arrow_up::arrow_up:](#python-for-data-science)
 <br /><br /><br /><br />
 
-<h3>Exercise 08: XXX</h3>
+<h3>Exercise 08: Loading ...</h3>
 
-Turn-in directory : exXXX/<br />
-Files to turn in : XXX.py<br />
+Turn-in directory : ex08/<br />
+Files to turn in : Loading.py<br />
 Allowed functions : None<br />
 
-XXX
+Creemos una función llamada ft_tqdm.
+La función debe copiar la función tqdm con el operador yield.
+
+Así es como debería ser el prototipo:
+
+```python
+def ft_tqdm(lst: range) -> None:
+#your code here
+```
+
+Tu tester.py: (comparas tu versión con la original)
+
+```python
+from time import sleep
+from tqdm import tqdm
+from Loading import ft_tqdm
+for elem in ft_tqdm(range(333)):
+sleep(0.005)
+print()
+for elem in tqdm(range(333)):
+sleep(0.005)
+print()
+```
+
+Resultado esperado: (debes tener una función lo más parecida posible a la versión original)
+
+```python
+$> python tester.py
+100%|[===============================================================>]| 333/333
+100%|                                                                  | 333/333 [00:01<00:00, 191.61it/s]
+```
 
 <br /><br />
 [:arrow_up::arrow_up::arrow_up::arrow_up::arrow_up: **top** :arrow_up::arrow_up::arrow_up::arrow_up::arrow_up:](#python-for-data-science)
 <br /><br /><br /><br />
 
-<h3>Exercise 09: XXX</h3>
+<h3>Exercise 09: My first package creation</h3>
 
-Turn-in directory : exXXX/<br />
-Files to turn in : XXX.py<br />
-Allowed functions : None<br />
+Turn-in directory : ex09/<br />
+Files to turn in : *.py, *.txt, *.toml, README.md, LICENSE<br />
+Allowed functions : PyPI or any library for creation package<br />
 
-XXX
+Crea tu primer paquete en Python de la forma que quieras, aparecerá en la lista de paquetes instalados cuando escribas el comando "pip list" y mostrará sus características cuando escribas "pip show -v ft_package"
+
+```python
+$>pip show -v ft_package
+Name: ft_package
+Version: 0.0.1
+Summary: A sample test package
+Home-page: https://github.com/eagle/ft_package
+Author: eagle
+Author-email: eagle@42.fr
+License: MIT
+Location: /home/eagle/...
+Requires:
+Required-by:
+Metadata-Version: 2.1
+Installer: pip
+Classifiers:
+Entry-points:
+$>
+```
+
+El paquete se instalará a través de pip usando uno de los siguientes comandos (ambos deberían funcionar):
+- pip install ./dist/ft_package-0.0.1.tar.gz
+- pip install ./dist/ft_package-0.0.1-py3-none-any.whl
+
+Su paquete debe poder ser invocado desde un script como este:
+
+```python
+from ft_package import count_in_list
+print(count_in_list(["toto", "tata", "toto"], "toto")) # output: 2
+print(count_in_list(["toto", "tata", "toto"], "tutu")) # output: 0
+```
 
 <br /><br />
 [:arrow_up::arrow_up::arrow_up::arrow_up::arrow_up: **top** :arrow_up::arrow_up::arrow_up::arrow_up::arrow_up:](#python-for-data-science)
