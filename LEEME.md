@@ -100,7 +100,7 @@ $>
 ```
 
 <br /><br />
-[:arrow_up::arrow_up::arrow_up::arrow_up::arrow_up: **top** :arrow_up::arrow_up::arrow_up::arrow_up::arrow_up:](#python-for-data-science)
+[:arrow_up::arrow_up::arrow_up::arrow_up::arrow_up: **subir** :arrow_up::arrow_up::arrow_up::arrow_up::arrow_up:](#python-for-data-science)
 <br /><br /><br /><br />
 
 ### <h3>Exercise 01 First use of package</h3>
@@ -122,7 +122,7 @@ $>
 ```
 
 <br /><br />
-[:arrow_up::arrow_up::arrow_up::arrow_up::arrow_up: **top** :arrow_up::arrow_up::arrow_up::arrow_up::arrow_up:](#python-for-data-science)
+[:arrow_up::arrow_up::arrow_up::arrow_up::arrow_up: **subir** :arrow_up::arrow_up::arrow_up::arrow_up::arrow_up:](#python-for-data-science)
 <br /><br /><br /><br />
 
 ### <h3>Exercise 02 First function python</h3>
@@ -183,7 +183,7 @@ $>python find_ft_type.py | cat -e
 $>
 ```
 <br /><br />
-[:arrow_up::arrow_up::arrow_up::arrow_up::arrow_up: **top** :arrow_up::arrow_up::arrow_up::arrow_up::arrow_up:](#python-for-data-science)
+[:arrow_up::arrow_up::arrow_up::arrow_up::arrow_up: **subir** :arrow_up::arrow_up::arrow_up::arrow_up::arrow_up:](#python-for-data-science)
 <br /><br /><br /><br />
 
 ### <h3>Exercise 03 NULL not found</h3>
@@ -250,7 +250,7 @@ $>
 ```
 
 <br /><br />
-[:arrow_up::arrow_up::arrow_up::arrow_up::arrow_up: **top** :arrow_up::arrow_up::arrow_up::arrow_up::arrow_up:](#python-for-data-science)
+[:arrow_up::arrow_up::arrow_up::arrow_up::arrow_up: **subir** :arrow_up::arrow_up::arrow_up::arrow_up::arrow_up:](#python-for-data-science)
 <br /><br /><br /><br />
 
 ### <h3>Exercise 04 The Even and the Odd</h3>
@@ -286,7 +286,7 @@ $>
 ```
 
 <br /><br />
-[:arrow_up::arrow_up::arrow_up::arrow_up::arrow_up: **top** :arrow_up::arrow_up::arrow_up::arrow_up::arrow_up:](#python-for-data-science)
+[:arrow_up::arrow_up::arrow_up::arrow_up::arrow_up: **subir** :arrow_up::arrow_up::arrow_up::arrow_up::arrow_up:](#python-for-data-science)
 <br /><br /><br /><br />
 
 ### <h3>A partir de ahora debes seguir estas reglas adicionales</h3>
@@ -331,8 +331,10 @@ def main():
 if __name__ == "__main__":
   main()
 ```
+
+
 <br /><br />
-[:arrow_up::arrow_up::arrow_up::arrow_up::arrow_up: **top** :arrow_up::arrow_up::arrow_up::arrow_up::arrow_up:](#python-for-data-science)
+[:arrow_up::arrow_up::arrow_up::arrow_up::arrow_up: **subir** :arrow_up::arrow_up::arrow_up::arrow_up::arrow_up:](#python-for-data-science)
 <br /><br /><br /><br />
 
 ### <h3>Exercise 05 First standalone program python</h3>
@@ -379,7 +381,7 @@ $>
 ```
 
 <br /><br />
-[:arrow_up::arrow_up::arrow_up::arrow_up::arrow_up: **top** :arrow_up::arrow_up::arrow_up::arrow_up::arrow_up:](#python-for-data-science)
+[:arrow_up::arrow_up::arrow_up::arrow_up::arrow_up: **subir** :arrow_up::arrow_up::arrow_up::arrow_up::arrow_up:](#python-for-data-science)
 <br /><br /><br /><br />
 
 ### <h3>Exercise 06</h3>
@@ -401,6 +403,7 @@ Puede validar el módulo desde aquí, pero le recomendamos que
 continúe ya que hay cosas que necesitará saber para los siguientes
 proyectos
 ```
+
 ***Parte 2: El programa***
 
 Cree un programa que acepte dos argumentos: una cadena(S) y un entero(N). El
@@ -437,7 +440,7 @@ $>
 ```
 
 <br /><br />
-[:arrow_up::arrow_up::arrow_up::arrow_up::arrow_up: **top** :arrow_up::arrow_up::arrow_up::arrow_up::arrow_up:](#python-for-data-science)
+[:arrow_up::arrow_up::arrow_up::arrow_up::arrow_up: **subir** :arrow_up::arrow_up::arrow_up::arrow_up::arrow_up:](#python-for-data-science)
 <br /><br /><br /><br />
 
 ### <h3>Exercise 07 Dictionaries SoS</h3>
@@ -472,7 +475,7 @@ $>
 ```
 
 <br /><br />
-[:arrow_up::arrow_up::arrow_up::arrow_up::arrow_up: **top** :arrow_up::arrow_up::arrow_up::arrow_up::arrow_up:](#python-for-data-science)
+[:arrow_up::arrow_up::arrow_up::arrow_up::arrow_up: **subir** :arrow_up::arrow_up::arrow_up::arrow_up::arrow_up:](#python-for-data-science)
 <br /><br /><br /><br />
 
 ### <h3>Exercise 08 Loading ...</h3>
@@ -514,7 +517,7 @@ $> python tester.py
 ```
 
 <br /><br />
-[:arrow_up::arrow_up::arrow_up::arrow_up::arrow_up: **top** :arrow_up::arrow_up::arrow_up::arrow_up::arrow_up:](#python-for-data-science)
+[:arrow_up::arrow_up::arrow_up::arrow_up::arrow_up: **subir** :arrow_up::arrow_up::arrow_up::arrow_up::arrow_up:](#python-for-data-science)
 <br /><br /><br /><br />
 
 ### <h3>Exercise 09 My first package creation</h3>

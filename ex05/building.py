@@ -1,7 +1,20 @@
-import sys                      # Proporciona acceso a variables y funciones del sistema operativo, como argumentos en la línea de comandos
-from collections import Counter # Importa la clase Counter del módulo collections que permite crear contadores de elementos en una colección (como una cadena de texto).
+import sys
+'''
+Proporciona acceso a variables y funciones del sistema operativo, como
+argumentos en la línea de comandos
+'''
+from collections import Counter
+'''
+Importa la clase Counter del módulo collections que permite crear
+contadores de elementos en una colección (como una cadena de texto).
+'''
 
-def count_chars(text):          # Función que recibe un argumento text (que será la cadena de texto a analizar).
+'''
+Función que recibe un argumento text (que será la cadena de texto a analizar)
+'''
+
+
+def count_chars(text):
     '''
     Counts the occurrences of different character types in a string.
 
@@ -9,12 +22,18 @@ def count_chars(text):          # Función que recibe un argumento text (que ser
         text: The string to analyze.
 
     Returns:
-        A dictionary where keys are character types ("upper", "lower", 
+        A dictionary where keys are character types ("upper", "lower",
         "punctuation", "digit", "space") and values are their counts.
     '''
-    char_counts = Counter()     # Crea un objeto char_counts de la clase Counter. Este objeto actuará como un diccionario donde se guardarán el conteo de cada tipo de carácter.
-
-    for char in text:           # Recorre cada carácter individual (char) en la cadena text.
+    '''
+    Crea un objeto char_counts de la clase Counter. Este objeto actuará como
+    un diccionario donde se guardarán el conteo de cada tipo de carácter.
+    '''
+    char_counts = Counter()
+    '''
+    Recorre cada carácter individual (char) en la cadena text.
+    '''
+    for char in text:
         if char.isupper():
             char_counts["upper"] += 1
         elif char.islower():
@@ -27,16 +46,24 @@ def count_chars(text):          # Función que recibe un argumento text (que ser
             char_counts["punctuation"] += 1
     return char_counts
 
+
 def main():
-    try:                          # El bloque try-except maneja posibles errores
-      if len(sys.argv) == 1:      # Si no hay argumentos, se imprime un mensaje indicando que el usuario debe introducir el texto y presionar Ctrl+D para finalizar
-        print("What is the text to count? Press Ctrl+D to end input.")
-        text = sys.stdin.read()   # Lee toda la entrada incluyendo retornos de carro
-      elif len(sys.argv) == 2:    # Si se ha proporcionado exactamente un argumento (además del nombre del script)        
-        text = sys.argv[1]        # Se asigna el argumento 
-      else:                       # Si se han proporcionado más de un argumento, muestra un mensaje de error indicando que solo se permite un argumento
-        print("Only one argument is allowed.")
-        return                    
+    '''
+    El bloque try-except maneja posibles errores
+    '''
+    try:
+        '''
+        Si no hay argumentos, se imprime un mensaje indicando que el usuario
+        debe introducir el texto y presionar Ctrl+D para finalizar
+        '''                          
+        if len(sys.argv) == 1:      
+            print("What is the text to count? Press Ctrl+D to end input.")
+            text = sys.stdin.read()   # Lee toda la entrada incluyendo retornos de carro
+        elif len(sys.argv) == 2:    # Si se ha proporcionado exactamente un argumento (además del nombre del script)        
+            text = sys.argv[1]        # Se asigna el argumento 
+        else:                       # Si se han proporcionado más de un argumento, muestra un mensaje de error indicando que solo se permite un argumento
+            print("Only one argument is allowed.")
+            return                    
     except AssertionError as e:   # Si ocurre una AssertionError, se imprime el mensaje de error original.
       print(e) 
       return
@@ -50,6 +77,7 @@ def main():
     print(f"{char_counts['punctuation']} punctuation mark{'s' if char_counts['punctuation'] != 1 else ''}")
     print(f"{char_counts['space']} space{'s' if char_counts['space'] != 1 else ''}")
     print(f"{char_counts['digit']} digit{'s' if char_counts['digit'] != 1 else ''}")
+
 
 if __name__ == "__main__":
     main()
