@@ -144,4 +144,9 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+# Resumen
+# Este código analiza un texto y cuenta la ocurrencia de diferentes tipos de
+# caracteres (mayúsculas, minúsculas, dígitos, espacios y puntuación).
+# Muestra el conteo total de caracteres y un desglose de cada tipo.
 '''
