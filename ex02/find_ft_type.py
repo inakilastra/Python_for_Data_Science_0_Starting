@@ -1,6 +1,6 @@
 def all_thing_is_obj(object: any) -> int:
-    # Diccionario llamado type_names que mapea tipos de datos built-in a cadenas descriptivas    
-    type_names = {                          
+    # Diccionario llamado type_names que mapea tipos de datos
+    type_names = {
         list: "List",
         tuple: "Tuple",
         set: "Set",
@@ -9,8 +9,9 @@ def all_thing_is_obj(object: any) -> int:
     }
 
     object_type = type(object)
-    # Se intenta obtener un nombre descriptivo para el tipo de objeto usando el diccionario type_names. 
-    # Si no se encuentra, se asigna "Type not found" a type_name                   
+    # Se intenta obtener un nombre descriptivo para el tipo de objeto usando
+    # el diccionario type_names.
+    # Si no se encuentra, se asigna "Type not found" a type_name
     type_name = type_names.get(object_type, "Type not found")
 
     if object_type == str:
@@ -21,6 +22,7 @@ def all_thing_is_obj(object: any) -> int:
         print(f"{type_name}")
 
     return 42
+
 
 '''    tester.py
 import sys

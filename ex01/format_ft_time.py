@@ -10,5 +10,6 @@ scientific_notation = "{:.2e}".format(current_time)
 human_readable_date = time.strftime("%b %d %Y", time.localtime())
 
 # Print the formatted output
-print(f"Seconds since January 1, 1970: {current_time:.2f} or {scientific_notation} in scientific notation")
+print(f"Seconds since January 1, 1970: {current_time:.2f} or \
+      {scientific_notation} in scientific notation")
 print(human_readable_date)

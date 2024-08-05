@@ -1,15 +1,43 @@
-ft_list  = ["Hello", "tata!"]  # Lista
-ft_tuple = ("Hello", "toto!")  # Tupla
-ft_set   = {"Hello", "tutu!"}  # Conjunto
-ft_dict  = {"Hello" : "titi!"} # Diccionario
-#your code here
-ft_list[1] = "World!"            # Modifico la lista
-ft_tuple = ("Hello", "Bizkaia!") # No se puede modificar la tupla, creo una nueva tupla
-ft_set.discard("tutu!")          # Elimino del conjunto
-ft_set.add("Urduliz!")           # Agrego al conjunto
-ft_dict["Hello"] = "42Urduliz!"  # Modifico la referencia "Hello" del diccionario
+ft_list = ["Hello", "tata!"]
+ft_tuple = ("Hello", "toto!")
+ft_set = {"Hello", "tutu!"}
+ft_dict = {"Hello": "titi!"}
 
-print(ft_list)  # Muestro los 4 tipos por pantalla
+ft_list[1] = "World!"
+ft_tuple = ("Hello", "Bizkaia!")
+ft_set.discard("tutu!")
+ft_set.add("Urduliz!")
+ft_dict["Hello"] = "42Urduliz!"
+
+print(ft_list)
 print(ft_tuple)
 print(ft_set)
 print(ft_dict)
+
+'''
+# Lista
+ft_list = ["Hello", "tata!"]
+# Tupla
+ft_tuple = ("Hello", "toto!")
+# Conjunto
+ft_set = {"Hello", "tutu!"}
+ # Diccionario
+ft_dict = {"Hello" : "titi!"}
+#your code here
+# Modifico la lista
+ft_list[1] = "World!"
+# No se puede modificar la tupla, creo una nueva tupla
+ft_tuple = ("Hello", "Bizkaia!")
+# Elimino del conjunto
+ft_set.discard("tutu!")
+# Agrego al conjunto
+ft_set.add("Urduliz!")
+# Modifico la referencia "Hello" del diccionario
+ft_dict["Hello"] = "42Urduliz!"
+
+# Muestro los 4 tipos por pantalla
+print(ft_list)
+print(ft_tuple)
+print(ft_set)
+print(ft_dict)
+'''
