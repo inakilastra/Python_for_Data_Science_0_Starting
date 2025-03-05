@@ -14,6 +14,24 @@ Seconds since January 1, 1970: 1,666,355,857.3622 or 1.67e+09 in scientific nota
 Oct 21 2022
 """
 
+import time
+import datetime
+
+seconds_since_epoch = time.time()
+
+decimal_format = f"{seconds_since_epoch}"
+
+scientific_format = f"{seconds_since_epoch:e}"
+
+now = datetime.datetime.now()
+
+formatted_date = now.strftime("%b %d %Y")
+
+print(f"Seconds since January 1, 1970: {decimal_format} or {scientific_format} in scientific notation")
+
+print(formatted_date)
+
+'''
 # Importamos los módulos necesarios:
 # - 'time' para trabajar con el tiempo en segundos desde el epoch
 # - 'datetime' para trabajar con fechas y horas de forma más completa
@@ -52,3 +70,4 @@ print(f"Seconds since January 1, 1970: {decimal_format} or {scientific_format} i
 
 # 7. Imprimir la segunda línea de salida: la fecha actual en formato "Mes Día Año"
 print(formatted_date)
+'''

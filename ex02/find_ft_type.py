@@ -37,6 +37,40 @@ def all_thing_is_obj(object: any) -> int:
     Returns:
         int: Siempre devuelve el valor entero 42.
     """
+
+    object_type = type(object)
+
+    if isinstance(object, list):
+        print(f"List : {object_type}")
+    elif isinstance(object, tuple):
+        print(f"Tuple : {object_type}")
+    elif isinstance(object, set):
+        print(f"Set : {object_type}")
+    elif isinstance(object, dict):
+        print(f"Dict : {object_type}")
+    elif isinstance(object, str):
+        print(f"{object} is a string : {object_type}")
+    elif isinstance(object, int):
+        print("Type not found")
+    else:
+        print("Type not found")
+    return 42
+'''    
+# Definición de la función 'all_thing_is_obj'
+# Utilizamos 'def' para definir una función en Python
+# 'all_thing_is_obj' es el nombre de la función
+# '(object: any)' define un parámetro llamado 'object' que puede ser de cualquier tipo ('any')
+# '-> int' indica que la función debe devolver un valor de tipo entero ('int')
+def all_thing_is_obj(object: any) -> int:
+    """
+    Función que imprime el tipo de objeto y devuelve 42.
+
+    Args:
+        object: Objeto de cualquier tipo (lista, tupla, conjunto, diccionario, cadena, entero, etc.).
+
+    Returns:
+        int: Siempre devuelve el valor entero 42.
+    """
     # 1. Obtener el tipo del objeto recibido como argumento
     #    Usamos la función type(object) para obtener el tipo del objeto
     object_type = type(object)
@@ -58,17 +92,8 @@ def all_thing_is_obj(object: any) -> int:
         # Si el objeto es un diccionario, imprimir "Dict : <class 'dict'>"
         print(f"Dict : {object_type}")
     elif isinstance(object, str):
-        # Si el objeto es una cadena de texto, comprobamos si es "Brian" o "Toto"
-        if object == "Brian":
-            # Si la cadena es "Brian", imprimir "Brian is in the kitchen : <class 'str'>"
-            print(f"Brian is in the kitchen : {object_type}")
-        elif object == "Toto":
-            # Si la cadena es "Toto", imprimir "Toto is in the kitchen : <class 'str'>"
-            print(f"Toto is in the kitchen : {object_type}")
-        else:
-            # Para cualquier otra cadena, podríamos poner un mensaje genérico,
-            # aunque el ejercicio no especifica un mensaje para otras cadenas
-            print(f"{object} is a string : {object_type}") # Mensaje genérico opcional para otras cadenas
+        # Si el objeto es una cadena de texto
+        print(f"{object} is a string : {object_type}") # Mensaje genérico opcional para otras cadenas
     elif isinstance(object, int):
         # Si el objeto es un entero, imprimir "Type not found"
         print("Type not found")
@@ -78,7 +103,7 @@ def all_thing_is_obj(object: any) -> int:
 
     # 3. Devolver el valor entero 42 (en todos los casos, independientemente del tipo de objeto)
     return 42
-
+'''
 
 '''    tester.py
 import sys

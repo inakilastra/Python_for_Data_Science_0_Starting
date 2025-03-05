@@ -1,152 +1,265 @@
+#!/usr/bin/env python3
+"""
+Ejercicio 05: Contador de Tipos de Caracteres
+
+Este script recibe una cadena de texto como argumento o, si no se proporciona
+ningún argumento, solicita al usuario que introduzca una cadena.
+Luego, analiza la cadena y cuenta la cantidad de caracteres en mayúsculas,
+minúsculas, signos de puntuación, dígitos y espacios. Finalmente, muestra los
+resultados del conteo.
+
+Si se proporciona más de un argumento en la línea de comandos, se lanza una
+excepción de tipo AssertionError.
+
+Nombre del archivo: building.py
+Funciones permitidas: sys, collections
+
+Salida esperada: (Ver enunciado del ejercicio)
+"""
+
 import sys
 from collections import Counter
 
 
-def count_chars(text):
-    '''
-    Counts the occurrences of different character types in a string.
+def count_chars(text: str) -> dict:
+    """
+    Cuenta las ocurrencias de diferentes tipos de caracteres en una cadena.
+
+    Esta función toma una cadena de texto como entrada y cuenta la cantidad
+    de caracteres en mayúsculas, minúsculas, dígitos, espacios y signos de
+    puntuación.
 
     Args:
-        text: The string to analyze.
+        text (str): La cadena de texto a analizar.
 
     Returns:
-        A dictionary where keys are character types ("upper", "lower",
-        "punctuation", "digit", "space") and values are their counts.
-    '''
+        dict: Un diccionario donde las claves son los tipos de caracteres
+              ("upper", "lower", "punctuation", "digit", "space") y los
+              valores son sus respectivas cantidades.
+    """
+    # Se crea un objeto Counter que actuará como un diccionario
+    # para almacenar los conteos de cada tipo de carácter.
     char_counts = Counter()
+    # Se itera sobre cada carácter de la cadena de texto.
     for char in text:
+        # Si el caracter está en mayúsculas.
         if char.isupper():
-            char_counts["upper"] += 1
+            char_counts["upper"] += 1  # Se incrementa el contador de "upper".
+        # Si el carácter está en minúsculas.
         elif char.islower():
-            char_counts["lower"] += 1
+            char_counts["lower"] += 1  # Se incrementa el contador de "lower".
+        # Si el carácter es un dígito.
         elif char.isdigit():
-            char_counts["digit"] += 1
+            char_counts["digit"] += 1  # Se incrementa el contador de "digit".
+        # Si el carácter es un espacio.
         elif char.isspace():
-            char_counts["space"] += 1
+            char_counts["space"] += 1  # Se incrementa el contador de "space".
+        # Si no es ninguno de los anteriores, es un signo de puntuación.
         else:
-            char_counts["punctuation"] += 1
+            char_counts["punctuation"] += 1  # Se incrementa el contador.
+    # Se devuelve el diccionario con los conteos de caracteres.
     return char_counts
 
 
-def main():
-    try:
-        if len(sys.argv) == 1:
-            print("What is the text to count? Press Ctrl+D to end input.")
-            text = sys.stdin.read()
-        elif len(sys.argv) == 2:
-            text = sys.argv[1]
-        else:
-            print("Only one argument is allowed.")
-            return
-    except AssertionError as error:
-        print("AssertionError:", error)
-        return
+def pluralize(count: int, word: str) -> str:
+    """
+    Añade una 's' a una palabra si el contador es distinto de 1.
 
-    char_counts = count_chars(text)
-    total_chars = sum(char_counts.values())
-
-    print(f"The text contains {total_chars} characters:")
-    print(f"{char_counts['upper']} upper letter \
-          {'s' if char_counts['upper'] != 1 else ''}")
-    print(f"{char_counts['lower']} lower letter \
-          {'s' if char_counts['lower'] != 1 else ''}")
-    print(f"{char_counts['punctuation']} punctuation mark \
-          {'s' if char_counts['punctuation'] != 1 else ''}")
-    print(f"{char_counts['space']} space \
-          {'s' if char_counts['space'] != 1 else ''}")
-    print(f"{char_counts['digit']} digit \
-          {'s' if char_counts['digit'] != 1 else ''}")
-
-
-if __name__ == "__main__":
-    main()
-
-'''
-# Proporciona acceso a variables y funciones del sistema operativo, como
-# argumentos en la línea de comandos
-import sys
-
-# Importa la clase Counter del módulo collections que permite crear
-# contadores de elementos en una colección (como una cadena de texto).
-from collections import Counter
-
-# Función que recibe un argumento text (que será la cadena de texto a analizar)
-def count_chars(text):
-    Counts the occurrences of different character types in a string.
+    Esta función se utiliza para gestionar la pluralización de palabras en
+    la salida del programa, añadiendo una 's' al final de la palabra si la
+    cantidad (count) es diferente de 1.
 
     Args:
-        text: The string to analyze.
+        count (int): La cantidad de elementos.
+        word (str): La palabra a pluralizar potencialmente.
 
     Returns:
-        A dictionary where keys are character types ("upper", "lower",
-        "punctuation", "digit", "space") and values are their counts.
-# Crea un objeto char_counts de la clase Counter. Este objeto actuará como
-# un diccionario donde se guardarán el conteo de cada tipo de carácter.
-char_counts = Counter()
-
-# Recorre cada carácter individual (char) en la cadena text.
-# incrementados los contadores en función del tipo de caracter
-for char in text:
-        if char.isupper():
-            char_counts["upper"] += 1
-        elif char.islower():
-            char_counts["lower"] += 1
-        elif char.isdigit():
-            char_counts["digit"] += 1
-        elif char.isspace():
-            char_counts["space"] += 1
-        else:
-            char_counts["punctuation"] += 1
-    return char_counts
+        str: La palabra con o sin 's' al final, dependiendo de count.
+    """
+    # Si el contador es diferente de 1, añade una "s" a la palabra.
+    return f"{word}{'s' if count != 1 else ''}"
 
 
 def main():
-    # El bloque try-except maneja posibles errores
+    """
+    Función principal del programa.
+
+    Esta función gestiona la entrada del usuario, realiza el conteo de
+    caracteres y muestra los resultados.
+
+    Si no se proporciona ningún argumento en la línea de comandos, se solicita
+    al usuario que introduzca una cadena de texto. Si se proporciona un
+    argumento, se utiliza como la cadena de entrada. Si se proporcionan más
+    de un argumento, se lanza una excepción AssertionError.
+    """
+    # Se utiliza un bloque try-except para manejar la excepción AssertionError.
     try:
-        # Si no hay argumentos, se imprime un mensaje indicando que el usuario
-        # debe introducir el texto y presionar Ctrl+D para finalizar
+        # 1. Comprobar la cantidad de argumentos en la linea de comandos
+        # Si no hay argumentos.
         if len(sys.argv) == 1:
-            print("What is the text to count? Press Ctrl+D to end input.")
-            # Lee toda la entrada incluyendo retornos de carro
+            # Se solicita al usuario que introduzca una cadena.
+            print("What is the text to count?")
+            # Se lee la entrada del usuario.
             text = sys.stdin.read()
-        # Si se ha proporcionado exactamente un argumento
+        # Si hay exactamente 2 argumentos (el nombre del script y uno mas).
         elif len(sys.argv) == 2:
-            # Se asigna el argumento
+            # El segundo argumento es el texto que se va a analizar.
             text = sys.argv[1]
-        # Si se han proporcionado más de un argumento, muestra un mensaje de
-        # error indicando que solo se permite un argumento
+        # Si hay más de 2 argumentos.
         else:
-            print("Only one argument is allowed.")
-            return
-    # Si ocurre una AssertionError, se imprime el mensaje de error original.
+            # Se lanza un error porque solo se permite un argumento.
+            raise AssertionError("Only one argument is allowed.")
+    # Si se lanza la excepción AssertionError.
     except AssertionError as error:
+        # Se imprime el mensaje de error.
         print("AssertionError:", error)
+        # Se sale de la funcion, con lo que el programa termina.
         return
 
-    # Llama a la función count_chars para obtener el conteo de caracteres.
+    # 2. Contar los caracteres en el texto de entrada.
+    # Se llama a la función count_chars para contar los caracteres.
     char_counts = count_chars(text)
-    # Calcula el total de caracteres sumando los valores de todas las claves
-    # en el diccionario char_counts.
+    # Se suman todos los valores del contador para obtener el total
     total_chars = sum(char_counts.values())
 
+    # 3. Imprimir los resultados.
+    # Se imprime el total de caracteres.
     print(f"The text contains {total_chars} characters:")
-    print(f"{char_counts['upper']} upper letter \
-          {'s' if char_counts['upper'] != 1 else ''}")
-    print(f"{char_counts['lower']} lower letter \
-          {'s' if char_counts['lower'] != 1 else ''}")
-    print(f"{char_counts['punctuation']} punctuation mark \
-          {'s' if char_counts['punctuation'] != 1 else ''}")
-    print(f"{char_counts['space']} space \
-          {'s' if char_counts['space'] != 1 else ''}")
-    print(f"{char_counts['digit']} digit \
-          {'s' if char_counts['digit'] != 1 else ''}")
-
+    # Se imprime el conteo de letras mayúsculas.
+    print(f"{char_counts['upper']} {pluralize(char_counts['upper'], 'upper letter')}")
+    # Se imprime el conteo de letras minúsculas.
+    print(f"{char_counts['lower']} {pluralize(char_counts['lower'], 'lower letter')}")
+    print(f"{char_counts['punctuation']} {pluralize(char_counts['punctuation'], 'punctuation mark')}")
+    print(f"{char_counts['space']} {pluralize(char_counts['space'], 'space')}")
+    print(f"{char_counts['digit']} {pluralize(char_counts['digit'], 'digit')}")
 
 if __name__ == "__main__":
     main()
 
-# Resumen
-# Este código analiza un texto y cuenta la ocurrencia de diferentes tipos de
-# caracteres (mayúsculas, minúsculas, dígitos, espacios y puntuación).
-# Muestra el conteo total de caracteres y un desglose de cada tipo.
+'''    
+import sys
+from collections import Counter
+
+
+def count_chars(text: str) -> dict:
+    """
+    Cuenta las ocurrencias de diferentes tipos de caracteres en una cadena.
+
+    Esta función toma una cadena de texto como entrada y cuenta la cantidad
+    de caracteres en mayúsculas, minúsculas, dígitos, espacios y signos de
+    puntuación.
+
+    Args:
+        text (str): La cadena de texto a analizar.
+
+    Returns:
+        dict: Un diccionario donde las claves son los tipos de caracteres
+              ("upper", "lower", "punctuation", "digit", "space") y los
+              valores son sus respectivas cantidades.
+    """
+    # Se crea un objeto Counter que actuará como un diccionario
+    # para almacenar los conteos de cada tipo de carácter.
+    char_counts = Counter()
+    # Se itera sobre cada carácter de la cadena de texto.
+    for char in text:
+        # Si el caracter está en mayúsculas.
+        if char.isupper():
+            char_counts["upper"] += 1  # Se incrementa el contador de "upper".
+        # Si el carácter está en minúsculas.
+        elif char.islower():
+            char_counts["lower"] += 1  # Se incrementa el contador de "lower".
+        # Si el carácter es un dígito.
+        elif char.isdigit():
+            char_counts["digit"] += 1  # Se incrementa el contador de "digit".
+        # Si el carácter es un espacio.
+        elif char.isspace():
+            char_counts["space"] += 1  # Se incrementa el contador de "space".
+        # Si no es ninguno de los anteriores, es un signo de puntuación.
+        else:
+            char_counts["punctuation"] += 1  # Se incrementa el contador.
+    # Se devuelve el diccionario con los conteos de caracteres.
+    return char_counts
+
+
+def pluralize(count: int, word: str) -> str:
+    """
+    Añade una 's' a una palabra si el contador es distinto de 1.
+
+    Esta función se utiliza para gestionar la pluralización de palabras en
+    la salida del programa, añadiendo una 's' al final de la palabra si la
+    cantidad (count) es diferente de 1.
+
+    Args:
+        count (int): La cantidad de elementos.
+        word (str): La palabra a pluralizar potencialmente.
+
+    Returns:
+        str: La palabra con o sin 's' al final, dependiendo de count.
+    """
+    # Si el contador es diferente de 1, añade una "s" a la palabra.
+    return f"{word}{'s' if count != 1 else ''}"
+
+
+def main():
+    """
+    Función principal del programa.
+
+    Esta función gestiona la entrada del usuario, realiza el conteo de
+    caracteres y muestra los resultados.
+
+    Si no se proporciona ningún argumento en la línea de comandos, se solicita
+    al usuario que introduzca una cadena de texto. Si se proporciona un
+    argumento, se utiliza como la cadena de entrada. Si se proporcionan más
+    de un argumento, se lanza una excepción AssertionError.
+    """
+    # Se utiliza un bloque try-except para manejar la excepción AssertionError.
+    try:
+        # 1. Comprobar la cantidad de argumentos en la linea de comandos
+        # Si no hay argumentos.
+        if len(sys.argv) == 1:
+            # Se solicita al usuario que introduzca una cadena.
+            print("What is the text to count?")
+            # Se lee la entrada del usuario.
+            text = sys.stdin.read()
+        # Si hay exactamente 2 argumentos (el nombre del script y uno mas).
+        elif len(sys.argv) == 2:
+            # El segundo argumento es el texto que se va a analizar.
+            text = sys.argv[1]
+        # Si hay más de 2 argumentos.
+        else:
+            # Se lanza un error porque solo se permite un argumento.
+            raise AssertionError("Only one argument is allowed.")
+    # Si se lanza la excepción AssertionError.
+    except AssertionError as error:
+        # Se imprime el mensaje de error.
+        print("AssertionError:", error)
+        # Se sale de la funcion, con lo que el programa termina.
+        return
+
+    # 2. Contar los caracteres en el texto de entrada.
+    # Se llama a la función count_chars para contar los caracteres.
+    char_counts = count_chars(text)
+    # Se suman todos los valores del contador para obtener el total
+    total_chars = sum(char_counts.values())
+
+    # 3. Imprimir los resultados.
+    # Se imprime el total de caracteres.
+    print(f"The text contains {total_chars} characters:")
+    # Se imprime el conteo de letras mayúsculas.
+    print(f"{char_counts['upper']} {pluralize(char_counts['upper'], 'upper letter')}")
+    # Se imprime el conteo de letras minúsculas.
+    print(f"{char_counts['lower']} {pluralize(char_counts['lower'], 'lower letter')}")
+    # Se imprime el conteo de signos de puntuación.
+    print(f"{char_counts['punctuation']} {pluralize(char_counts['punctuation'], 'punctuation mark')}")
+    # Se imprime el conteo de espacios.
+    print(f"{char_counts['space']} {pluralize(char_counts['space'], 'space')}")
+    # Se imprime el conteo de dígitos.
+    print(f"{char_counts['digit']} {pluralize(char_counts['digit'], 'digit')}")
+
+
+# El bloque if __name__ == "__main__": se ejecuta solo cuando el script
+# se ejecuta directamente (no cuando se importa como un módulo).
+if __name__ == "__main__":
+    # Se llama a la función principal.
+    main()
 '''

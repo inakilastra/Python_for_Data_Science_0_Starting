@@ -52,6 +52,23 @@ def NULL_not_found(object: any) -> int:
              Devuelve 1 si el objeto no se encuentra entre esas categorias
              e imprime "Type not Found"
     """
+
+    if object is None:
+        type_name = "Nothing"
+    elif isinstance(object, float) and math.isnan(object):
+        type_name = "Cheese"
+    elif isinstance(object, bool):
+        type_name = "Fake"
+    elif object == 0:
+        type_name = "Zero"
+    elif object == '':
+        type_name = "Empty"
+    else:
+        print("Type not Found")
+        return 1
+    print(f"{type_name}: {object} {type(object)}")
+    return 0
+'''
     # 1. Comprobar si el objeto es 'None'
     #    'is None' compara si el objeto es exactamente el valor nulo 'None'.
     if object is None:
@@ -90,6 +107,7 @@ def NULL_not_found(object: any) -> int:
     print(f"{type_name}: {object} {type(object)}")
     # 8. Devolver 0 en los casos especificados.
     return 0
+'''
 
 '''
 # Este es el código de tester.py
